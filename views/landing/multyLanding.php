@@ -44,16 +44,47 @@ use app\assets\AppAsset;
         <?php $counter++; if ($counter <  count($themes_list)) {echo "<br><br><br>";}?>
         <?php } ?>
     </div>
-    <div class="screen screen-4 screen-title <?=$class_cards?>">
+    <div class="screen screen-4 screen-title <?=$class_cards?> nav-tab-widget-wrapper">
             <p><span class="bold"><?=$random?></span></p>
             <div class="separator"></div>
-            <?=$cardsWidget?>
+            <div class="nav-tab flexbox nav-tab-widget">
+                <?php $i = 0; foreach ($cardsNav as $nav) { ?>
+                    <span class="<?= $i == 0 ? "active" : "" ?> <?= $nav['id']?>" data-content="<?=$i?>" data-loaded="1">
+                        <?= $nav['name']?>
+                    </span>
+                <?php $i++; } ?>
+            </div>
+            <?php foreach ($cardsWidget as $cardWidget) {
+                echo $cardWidget; 
+            } ?>
+        
     </div>
+    <div class="multy-product-container">
     <?=$productWidget?>
+    </div>
 </div>
 <script>
 $(document).ready(function(){
     $('.landing-slider').cbpFWSlider();
+    
+    var tabs = $('.tab-content').toArray();
+    var navs = $(".nav-tab-widget span").toArray();
+    
+    $(tabs[0]).css("display", "block");
+    
+    for (var i = 0; i < tabs.length; i++) {
+        $(navs[i]).on('click', function(){
+            if ($(this).hasClass("active")) return false;
+            var id = parseInt($(this).data("content"));
+            for (var j = 0; j < tabs.length; j++) {
+                $(tabs[j]).css("display", "none");
+                $(navs[j]).removeClass("active");
+            }
+            $(tabs[id]).css("display", "block");
+            $(navs[id]).addClass("active");
+        })
+    }
 });
+
 </script>
 

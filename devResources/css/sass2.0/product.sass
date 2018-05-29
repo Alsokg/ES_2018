@@ -32,7 +32,7 @@
   text-transform: lowercase
   background-image: url(sprite.png?3)
   + span 
-    text-transform
+    text-transform: lowercase
 .website
   width: 20px
   height: 20px
@@ -167,3 +167,42 @@ nav ul li a
   background: #fff
   img
     max-width: 216px
+.nav-tab-widget-wrapper
+  .tab-content
+    display: none
+.multy-product-container
+  .secont-promo, .screen-promo
+    height: 120px
+  .desktop-promo .screen-promo, .secont-promo
+    @media (max-width: 767px)
+      width: 100%
+      padding: 0
+      margin-top: 16px
+  .flexbox
+    @media (max-width: 767px)
+      flex-wrap: wrap
+  .desktop-promo .promo-main
+    .text span
+      text-align: center
+.business-and-it
+  .tab-content:nth-child(4)
+    .card
+      &__header
+        background-color: #4a66ca
+  .tab-content:nth-child(5)
+    .card
+      &__header
+        background-color: #4b5ead
+    .card__word
+      min-height: initial
+      height: auto
+      padding-bottom: 8px
+    .card__tr
+      color: #747474
+      padding-bottom: 10px
+      display: block
+    li:nth-child(1), li:nth-child(2), li:nth-child(4)
+      .card--right .card__tr
+        display: none
+      
+    

@@ -178,17 +178,30 @@ class LandingController extends BasicController{
         
         $cards = array();
         $fileName = array();
-        $cards = include('common/business-cards.php');
+        
         
         $themesMulty = explode("-and-", $pageSeoUrl);
         $it = 0;
+        $cardsWidget = array();
+        
+        $cardsNav = array();
+        
         foreach ($themesMulty as $id) {
             $fileName[] = array(
                 'filePath' => "common/".$id."-themes.php",
-                'name' => $products[$it]['name_en'],
+                'name' => $products[$it]['name_'.$lang],
                 );
+            $cardsWidget[$it] = CardsWidget::widget([
+                    'message' => include("common/".$id."-cards.php"),
+                ]);
+            $cardsNav[] = array(
+                    'id' => $id,
+                    'name' => $products[$it]['name_'.$lang]
+                );    
             $it++;
         }
+        
+        
         
         $this->view->params['seo'] = $page['seo_text_'.$lang];
         
@@ -213,9 +226,8 @@ class LandingController extends BasicController{
                 'class_cards' => $pageSeoUrl,
                 ]),
             'themes_title' => $page['block2_title_'.$lang],
-            'cardsWidget' => CardsWidget::widget([
-                'message' => $cards,
-                ]),
+            'cardsWidget' => $cardsWidget,
+            'cardsNav' => $cardsNav,
             'random' => $page['random_'.$lang],
             'themes_list' => $fileName,
             'class_cards' => $pageSeoUrl,
