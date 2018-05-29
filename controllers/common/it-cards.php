@@ -145,7 +145,7 @@ $cards = array(
         'src' => '../img/cards-spanish/307.png',
         ),																					
     array(
-        'word_1' => 'negocio m',
+        'word_1' => 'up',
         'word_2' => '',
         'word_3' => '',
         'sentence_0' => '',
