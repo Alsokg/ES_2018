@@ -1,0 +1,27 @@
+.rating  
+  i
+    color: $yellowLight
+    font-size: 100%
+    padding: 1px
+    &.active
+      color: $yellow
+.reviews-count
+  span
+    font-size: 87.5%
+    color: $gray
+.rating-wrapper
+  +flexbox()
+  +justify-content(space-between)
+  max-width: 230px
+  width: 100%
+  margin: 0 auto
+.input-rating-group
+  display: inline-block
+  label
+    float: left
+    cursor: pointer
+    font-size: 16px
+    padding-lefT: 1px
+    padding-right: 1px
+  input
+    display: none

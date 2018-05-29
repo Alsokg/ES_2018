@@ -1,0 +1,127 @@
+.carousel
+  height: 100%
+  width: 100%
+  transform-style: preserve-3d
+  transition: transform 1s
+  +flexbox()
+  +justify-content(center)
+  margin-top: -36px
+.item
+  display: block
+  float: left
+  width: 150px
+  height: 150px
+  font-size: 24px
+  text-align: center
+  color: #FFF
+  opacity: 1
+  +flexbox()
+  position: relative
+  .content
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    line-height: 50px
+    margin: auto
+    transition: all 0.1s
+    cursor: pointer
+    opacity: 0.85
+    overflow: hidden
+    border: 2px solid $blue
+    z-index: 4
+    @media (max-width: $breakXS)
+      width: 40px
+      height: 40px
+      line-height: 40px
+    img
+        max-width: 100%
+  &:first-child .content, &:last-child .content
+    width: 36px
+    height: 36px
+    line-height: 36px
+    opacity: 0.5
+    border: 1px solid $blue
+    @media (max-width: $breakXS)
+      width: 30px
+      height: 30px
+      line-height: 30px
+  &:nth-child(4)
+    margin-left: -40px
+  &:nth-child(5)
+    margin-left: -65px
+  &:nth-child(2)
+    margin-right: -40px
+  &:nth-child(1)
+    margin-right: -65px
+.item.active .content
+  transition: all 0.35s ease-in
+  width: 100px
+  height: 100px
+  line-height: 100px
+  font-size: 36px
+  opacity: 1
+  border: 3px solid $blue
+  @media (max-width: $breakXS)
+    width: 80px
+    height: 80px
+    line-height: 80px
+.text-carousel
+  position: absolute
+  top: 120px
+  transition: all 0.1s
+  opacity: 0
+  width: 100vw
+  max-width: 320px
+  left: 50%
+  @media (max-width: $breakM)
+    width: 170%
+  @media (max-width: $breakS)
+    width: 150%
+  @media (max-width: $breakXS)
+    width: 130%
+.text-carousel p
+  margin-left: -100%
+  font-size: 87.5%
+  color: $gray
+  +transition(all, 0.1s)
+  line-height: 18px
+  max-height: 500px
+  font-weight: 300
+.active .text-carousel
+  top: 160px
+  opacity: 1
+  transition: all 0.5s
+  display: block
+  .who
+    font-weight: 300
+    color: $gray
+  .author
+    font-weight: 700
+    clear: both
+.show-full
+  width: auto
+  padding-bottom: 16px
+  float: right
+  font-weight: 300
+  background-color: #212a30
+  margin-top: -20px
+  padding-left: 4px
+.text-carousel .ellipsis
+  max-height: 54px
+  +transition(all, 0.15s)
+  overflow: hidden
+  text-overflow: ellipsis
+  -o-text-overflow: ellipsis
+  line-height: 18px
+.add-info
+  font-size: 12px
+  color: $gray
+  font-weight: 300
+.bottom-btns
+  +flexbox()
+  +justify-content(space-around)
+  margin-bottom: 0
+  margin-top: auto
+  position: absolute
+  bottom: 48px
+  width: 100%

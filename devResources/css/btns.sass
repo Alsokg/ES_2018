@@ -1,0 +1,150 @@
+.blue-text-btn
+  cursor: pointer
+  color: $blue
+  text-decoration: none
+  +transition(all, 0.2s)
+  &:active, &:focus, &:hover
+    color: $orange
+    +transition(all, 0.2s)
+    span, i, a
+      color: $orange
+  a:active, a:hover, a:focus
+    i
+      color: $orange
+  a, label, span, p, input, i
+    color: $blue
+    text-decoration: none
+    +transition(all, 0.2s)
+    &:active, &:focus, &:hover
+      color: $orange
+      +transition(all, 0.2s)
+.image-ring      
+  padding: 16px
+  width: 140px
+  height: 140px
+  text-align: center
+.logoes-wrapper
+  +justify-content(space-around)
+  +flex-wrap(wrap)
+  padding: 32px 
+  .partner
+    @extend .image-ring
+    +flexbox()
+    min-width: 25%
+    img
+      margin: auto
+      max-width: 100%
+      max-height: 100%
+.reason-wrapper
+  width: 50%
+  &:nth-child(1),&:nth-child(3)
+    +justify-content(flex-end)
+    @media (max-width: $breakT)
+      +justify-content(flex-start)
+  padding: 8px 48px
+  @media (max-width: $breakT)
+    +flex-direction(column)
+    .text-reason
+      text-align: center
+    padding: 8px 24px
+  @media (max-width: $breakS)
+    padding: 8px 16px
+  @media (max-width: $breakXS)
+    padding: 8px
+    .text-reason span
+      font-size: 87.5%
+.icon-reason, .icon-work
+  min-width: 100px
+  +flexbox()
+  div
+    margin: auto 0
+  @media (max-width: $breakT)
+    min-height: 100px
+    div
+      margin: auto
+.text-reason
+  padding-left: 8%
+  margin: auto 0
+  width: 400px
+  max-width: 100%
+  @media (max-width: $breakT)
+    padding-left: 0
+    margin: 0
+  span
+    color: $gray
+    font-weight: 300
+  .bold
+    color: $black
+    font-weight: 700
+.step-work
+  +flex-direction(column)
+  width: 260px
+  padding: 8px 32px
+  .text-work
+    text-align: center
+    padding-top: 16px
+  span
+   // color: $gray
+  //  font-weight: 300
+  @media (max-width: $breakS)
+    width: 50%
+    padding: 8px
+    .text-work span
+      font-size: 87.5%
+.icon-work
+  min-height: 80px
+  div
+    margin: auto
+.blue-dot-list
+  max-width: 600px
+  width: 100%
+  margin: 8px auto
+  padding: 0 8px 16px 32px
+  li
+    color: $gray
+    font-weight: 300
+    line-height: 24px
+    position: relative
+    &:before
+      content: " "
+      position: absolute
+      width: 8px
+      height: 8px
+      background-color: $blue
+      margin-top: 11px
+      margin-left: -24px
+.to-main2
+  margin: 0 auto
+.to-work-container
+  +justify-content(center)
+  +flex-wrap(wrap)
+.reasons-container
+  +flex-wrap(wrap)
+.ico-work-1
+  +sprite($-eng-student-icon-06)
+.ico-work-2
+  +sprite($-eng-student-icon-07)
+.ico-work-3
+  +sprite($-eng-student-icon-08)
+.ico-work-4
+  +sprite($-eng-student-icon-09)
+.ico-work-5
+  +sprite($-eng-student-icon-10)
+.ico-reason-1
+  +sprite($-eng-student-icon-02)
+.ico-reason-2
+  +sprite($-eng-student-icon-03)
+.ico-reason-3
+  +sprite($-eng-student-icon-04)
+.ico-reason-4
+  +sprite($-eng-student-icon-05)
+.social-login-btns >
+  p, span
+    color: $gray !important
+    font-size: 16px !important
+    font-weight: 300 !important
+    text-align: left !important
+    @media (max-width: $breakXS)
+      font-size: 14px !important
+      
+      

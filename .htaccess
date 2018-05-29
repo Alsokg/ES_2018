@@ -1,0 +1,16 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/
+RewriteRule ^assets/(.*)$ /kids/assets/$1 [L]
+RewriteRule ^css/(.*)$ /kids/css/$1 [L]
+RewriteRule ^js/(.*)$ /kids/js/$1 [L]
+RewriteRule ^img/(.*)$ /kids/img/$1 [L]
+RewriteRule ^icons/(.*)$ /kids/icons/$1 [L]
+RewriteRule ^js/json/(.*)$ /kids/js/json/$1 [L]
+#RewriteRule (.*) /$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php

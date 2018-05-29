@@ -1,0 +1,222 @@
+[23-May-2017 13:21:27 UTC] PHP Fatal error:  Call to undefined function registerCssFile() in /home/ubuntu/workspace/kids2/views/layouts/main.php on line 26
+[23-May-2017 13:21:27 UTC] PHP Stack trace:
+[23-May-2017 13:21:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[23-May-2017 13:21:27 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[23-May-2017 13:21:27 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[23-May-2017 13:21:27 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[23-May-2017 13:21:27 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[23-May-2017 13:21:27 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[23-May-2017 13:21:27 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 13:21:27 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 13:21:27 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:64
+[23-May-2017 13:21:27 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:382
+[23-May-2017 13:21:27 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:396
+[23-May-2017 13:21:27 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[23-May-2017 13:21:27 UTC] PHP  13. require() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:328
+[23-May-2017 13:50:56 UTC] PHP Fatal error:  Class 'Url' not found in /home/ubuntu/workspace/kids2/views/layouts/main.php on line 34
+[23-May-2017 13:50:56 UTC] PHP Stack trace:
+[23-May-2017 13:50:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[23-May-2017 13:50:56 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[23-May-2017 13:50:56 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[23-May-2017 13:50:56 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[23-May-2017 13:50:56 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[23-May-2017 13:50:56 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[23-May-2017 13:50:56 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 13:50:56 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 13:50:56 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:64
+[23-May-2017 13:50:56 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:382
+[23-May-2017 13:50:56 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:396
+[23-May-2017 13:50:56 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[23-May-2017 13:50:56 UTC] PHP  13. require() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:328
+[23-May-2017 13:51:13 UTC] PHP Fatal error:  Class 'Url' not found in /home/ubuntu/workspace/kids2/views/layouts/main.php on line 34
+[23-May-2017 13:51:13 UTC] PHP Stack trace:
+[23-May-2017 13:51:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[23-May-2017 13:51:13 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[23-May-2017 13:51:13 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[23-May-2017 13:51:13 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[23-May-2017 13:51:13 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[23-May-2017 13:51:13 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[23-May-2017 13:51:13 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 13:51:13 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 13:51:13 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:64
+[23-May-2017 13:51:13 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:382
+[23-May-2017 13:51:13 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:396
+[23-May-2017 13:51:13 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[23-May-2017 13:51:13 UTC] PHP  13. require() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:328
+[23-May-2017 13:51:55 UTC] PHP Fatal error:  Class 'Url' not found in /home/ubuntu/workspace/kids2/views/layouts/main.php on line 34
+[23-May-2017 13:51:55 UTC] PHP Stack trace:
+[23-May-2017 13:51:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[23-May-2017 13:51:55 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[23-May-2017 13:51:55 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[23-May-2017 13:51:55 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[23-May-2017 13:51:55 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[23-May-2017 13:51:55 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[23-May-2017 13:51:55 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 13:51:55 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 13:51:55 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:64
+[23-May-2017 13:51:55 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:382
+[23-May-2017 13:51:55 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:396
+[23-May-2017 13:51:55 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[23-May-2017 13:51:55 UTC] PHP  13. require() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:328
+[23-May-2017 13:58:32 UTC] PHP Fatal error:  Class 'app\controllers\Url' not found in /home/ubuntu/workspace/kids2/controllers/SiteController.php on line 65
+[23-May-2017 13:58:32 UTC] PHP Stack trace:
+[23-May-2017 13:58:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[23-May-2017 13:58:32 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[23-May-2017 13:58:32 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[23-May-2017 13:58:32 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[23-May-2017 13:58:32 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[23-May-2017 13:58:32 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[23-May-2017 13:58:32 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 13:58:32 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 14:01:35 UTC] PHP Fatal error:  Class 'Url' not found in /home/ubuntu/workspace/kids2/views/layouts/main.php on line 32
+[23-May-2017 14:01:35 UTC] PHP Stack trace:
+[23-May-2017 14:01:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[23-May-2017 14:01:35 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[23-May-2017 14:01:35 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[23-May-2017 14:01:35 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[23-May-2017 14:01:35 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[23-May-2017 14:01:35 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[23-May-2017 14:01:35 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 14:01:35 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 14:01:35 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:64
+[23-May-2017 14:01:35 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:382
+[23-May-2017 14:01:35 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:396
+[23-May-2017 14:01:35 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[23-May-2017 14:01:35 UTC] PHP  13. require() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:328
+[23-May-2017 14:09:30 UTC] PHP Fatal error:  Call to undefined method Yii::CARDS() in /home/ubuntu/workspace/kids2/views/layouts/main.php on line 39
+[23-May-2017 14:09:30 UTC] PHP Stack trace:
+[23-May-2017 14:09:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[23-May-2017 14:09:30 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[23-May-2017 14:09:30 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[23-May-2017 14:09:30 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[23-May-2017 14:09:30 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[23-May-2017 14:09:30 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[23-May-2017 14:09:30 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 14:09:30 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[23-May-2017 14:09:30 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:64
+[23-May-2017 14:09:30 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:382
+[23-May-2017 14:09:30 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:396
+[23-May-2017 14:09:30 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[23-May-2017 14:09:30 UTC] PHP  13. require() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:328
+[24-May-2017 12:25:17 UTC] PHP Fatal error:  Call to undefined method app\models\Info::first() in /home/ubuntu/workspace/kids2/controllers/SiteController.php on line 65
+[24-May-2017 12:25:17 UTC] PHP Stack trace:
+[24-May-2017 12:25:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[24-May-2017 12:25:17 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[24-May-2017 12:25:17 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[24-May-2017 12:25:17 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[24-May-2017 12:25:17 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[24-May-2017 12:25:17 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[24-May-2017 12:25:17 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[24-May-2017 12:25:17 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-May-2017 14:49:32 UTC] PHP Fatal error:  Call to undefined method Yii::app() in /home/ubuntu/workspace/kids2/views/layouts/main.php on line 68
+[31-May-2017 14:49:32 UTC] PHP Stack trace:
+[31-May-2017 14:49:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[31-May-2017 14:49:32 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[31-May-2017 14:49:32 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[31-May-2017 14:49:32 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[31-May-2017 14:49:32 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[31-May-2017 14:49:32 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[31-May-2017 14:49:32 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-May-2017 14:49:32 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-May-2017 14:49:32 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:69
+[31-May-2017 14:49:32 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:382
+[31-May-2017 14:49:32 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:396
+[31-May-2017 14:49:32 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[31-May-2017 14:49:32 UTC] PHP  13. require() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:328
+[31-May-2017 14:50:19 UTC] PHP Fatal error:  Call to undefined method Yii::app() in /home/ubuntu/workspace/kids2/views/layouts/main.php on line 68
+[31-May-2017 14:50:19 UTC] PHP Stack trace:
+[31-May-2017 14:50:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[31-May-2017 14:50:19 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[31-May-2017 14:50:19 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[31-May-2017 14:50:19 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[31-May-2017 14:50:19 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[31-May-2017 14:50:19 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[31-May-2017 14:50:19 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-May-2017 14:50:19 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-May-2017 14:50:19 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:69
+[31-May-2017 14:50:19 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:382
+[31-May-2017 14:50:19 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:396
+[31-May-2017 14:50:19 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[31-May-2017 14:50:19 UTC] PHP  13. require() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:328
+[31-May-2017 15:25:00 UTC] PHP Fatal error:  Call to undefined method Yii::app() in /home/ubuntu/workspace/kids2/views/layouts/main.php on line 32
+[31-May-2017 15:25:00 UTC] PHP Stack trace:
+[31-May-2017 15:25:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[31-May-2017 15:25:00 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[31-May-2017 15:25:00 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[31-May-2017 15:25:00 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[31-May-2017 15:25:00 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[31-May-2017 15:25:00 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[31-May-2017 15:25:00 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-May-2017 15:25:00 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-May-2017 15:25:00 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:69
+[31-May-2017 15:25:00 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:382
+[31-May-2017 15:25:00 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:396
+[31-May-2017 15:25:00 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[31-May-2017 15:25:00 UTC] PHP  13. require() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:328
+[07-Jun-2017 09:40:06 UTC] PHP Fatal error:  Class 'app\controllers\Article' not found in /home/ubuntu/workspace/kids2/controllers/SiteController.php on line 65
+[07-Jun-2017 09:40:06 UTC] PHP Stack trace:
+[07-Jun-2017 09:40:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[07-Jun-2017 09:40:06 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[07-Jun-2017 09:40:06 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[07-Jun-2017 09:40:06 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[07-Jun-2017 09:40:06 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[07-Jun-2017 09:40:06 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[07-Jun-2017 09:40:06 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2017 09:40:06 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2017 09:45:18 UTC] PHP Parse error:  syntax error, unexpected '$k' (T_VARIABLE) in /home/ubuntu/workspace/kids2/controllers/SiteController.php on line 69
+[07-Jun-2017 09:45:18 UTC] PHP Stack trace:
+[07-Jun-2017 09:45:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[07-Jun-2017 09:45:18 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[07-Jun-2017 09:45:18 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[07-Jun-2017 09:45:18 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[07-Jun-2017 09:45:18 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:517
+[07-Jun-2017 09:45:18 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:591
+[07-Jun-2017 09:45:18 UTC] PHP   7. class_exists() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:633
+[07-Jun-2017 09:45:18 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:633
+[07-Jun-2017 09:45:18 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:633
+[07-Jun-2017 10:05:29 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/kids2/views/site/index.php on line 12
+[07-Jun-2017 10:05:29 UTC] PHP Stack trace:
+[07-Jun-2017 10:05:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[07-Jun-2017 10:05:29 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[07-Jun-2017 10:05:29 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[07-Jun-2017 10:05:29 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[07-Jun-2017 10:05:29 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[07-Jun-2017 10:05:29 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[07-Jun-2017 10:05:29 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2017 10:05:29 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2017 10:05:29 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/kids2/controllers/SiteController.php:96
+[07-Jun-2017 10:05:29 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:381
+[07-Jun-2017 10:05:29 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:152
+[07-Jun-2017 10:05:29 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/View.php:250
+[07-Jun-2017 13:22:50 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/ubuntu/workspace/kids2/controllers/SiteController.php on line 114
+[07-Jun-2017 13:22:50 UTC] PHP Stack trace:
+[07-Jun-2017 13:22:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[07-Jun-2017 13:22:50 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[07-Jun-2017 13:22:50 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[07-Jun-2017 13:22:50 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[07-Jun-2017 13:22:50 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:517
+[07-Jun-2017 13:22:50 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:591
+[07-Jun-2017 13:22:50 UTC] PHP   7. class_exists() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:633
+[07-Jun-2017 13:22:50 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:633
+[07-Jun-2017 13:22:50 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:633
+[07-Jun-2017 13:23:16 UTC] PHP Fatal error:  Class 'app\controllers\Sale' not found in /home/ubuntu/workspace/kids2/controllers/SiteController.php on line 95
+[07-Jun-2017 13:23:16 UTC] PHP Stack trace:
+[07-Jun-2017 13:23:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[07-Jun-2017 13:23:16 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[07-Jun-2017 13:23:16 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[07-Jun-2017 13:23:16 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[07-Jun-2017 13:23:16 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:523
+[07-Jun-2017 13:23:16 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Controller.php:156
+[07-Jun-2017 13:23:16 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2017 13:23:16 UTC] PHP   8. app\controllers\SiteController->actionIndex() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2017 13:24:02 UTC] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting ',' or ';' in /home/ubuntu/workspace/kids2/controllers/SiteController.php on line 15
+[07-Jun-2017 13:24:02 UTC] PHP Stack trace:
+[07-Jun-2017 13:24:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/kids2/kids/index.php:0
+[07-Jun-2017 13:24:02 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/kids2/kids/index.php:12
+[07-Jun-2017 13:24:02 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Application.php:380
+[07-Jun-2017 13:24:02 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/web/Application.php:102
+[07-Jun-2017 13:24:02 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:517
+[07-Jun-2017 13:24:02 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:591
+[07-Jun-2017 13:24:02 UTC] PHP   7. class_exists() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:633
+[07-Jun-2017 13:24:02 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:633
+[07-Jun-2017 13:24:02 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/kids2/vendor/yiisoft/yii2/base/Module.php:633

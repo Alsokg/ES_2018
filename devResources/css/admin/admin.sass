@@ -1,0 +1,524 @@
+@import mix
+@import var
+@import button
+*
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 16px
+  outline: 0
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  font-family: Arial, Helvetica, sans-serif
+body
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 16px
+  background: #feac5e
+  background: -webkit-linear-gradient(left, #feac5e, #c779d0, #4bc0c8)
+  background: -moz-linear-gradient(left, #feac5e, #c779d0, #4bc0c8)
+  background: -o-linear-gradient(left, #feac5e, #c779d0, #4bc0c8)
+  background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8)
+  min-height: 100vh
+.login-form
+  min-height: 100vh
+  margin-left: -240px
+  +flexbox()
+  +justify-content(center)
+.aligner-mid
+  margin: auto
+  background: rgba(255,255,255,0.67)
+  width: 100%
+  max-width: 320px
+  padding: 24px
+  border: thin solid #555
+  box-shadow: 0 10px 50px 2px rgba(0,0,0,0.5)
+  border-radius: 16px
+  input
+    width: 100%
+    margin: 16px 0
+    line-height: 36px
+    padding: 0 8px
+.shadow
+  border-radius: 5px
+  box-shadow: 0 2px 3px hsla(0,0%,4%,.1),0 0 0 1px hsla(0,0%,4%,.1)
+.label-login
+  line-height: 36px
+  border: #ccc
+  font-size: 150%
+  font-weight: 300
+  color: #777
+  padding-bottom: 16px
+.error-form
+  color: $red
+  display: none
+.pane
+  background-color: #fff
+  border-radius: 5px
+  box-shadow: 0 2px 3px hsla(0,0%,4%,.1),0 0 0 1px hsla(0,0%,4%,.1)
+  display: block
+  padding: 1.25rem
+body
+  +flexbox()
+nav
+  position: fixed
+  height: 100vh
+  a
+    color: #ccc
+    &:active, &:hover
+      color: #fff
+.admin-wrapper
+  padding: 0
+  padding-left: 240px
+  width: 100%
+.work-area
+  @extend .shadow
+  background: #eee
+  padding: 16px
+  width: 100%
+  min-height: 100vw
+  border-radius: 0
+  padding-top: 76px
+.workground
+  background-color: #fefefe
+  @extend .shadow
+  padding: 16px
+  margin-bottom: 16px
+  .title
+    font-size: 24px
+    padding-bottom: 8px
+.main-menu
+  width: 240px
+  background-color: #333
+  min-height: 100%
+main 
+  min-width: 320px
+  padding: 50px
+  margin: 0 auto
+  background: #fff
+
+section 
+  display: none
+  padding: 20px 0 0
+  border-top: 1px solid #ddd
+
+.tab-widget > div
+  display: none
+.tab-widget > .active
+  display: block
+.tab-widget
+  position: relative
+  padding-top: 32px
+  border-top: #ccc
+  .tab
+    position: absolute
+    top: 12px
+    width: 40px
+    display: block
+    cursor: pointer
+    text-align: center
+    border-bottom: #eee
+    &:nth-child(3)
+      margin-left: 40px
+    &:nth-child(5)
+      margin-left: 80px
+  .selected
+    border-bottom: 4px solid #5fcafc
+    color: #ccc
+.block
+  padding-bottom: 48px
+input, textarea
+  width: 100%
+  &:focus
+    border: thin solid #48D2FF
+    box-shadow: 0px 0px 3px 0px #48D2FF
+input[type="text"], textarea
+  height: 40px
+  padding: 8px
+  border-radius: 4px
+  border: thin solid #ccc
+textarea
+  height: 90px
+input[type="checkbox"]
+  width: auto
+input[type="number"]
+  width: 60px
+  height: 40px
+  padding: 8px
+  border-radius: 4px
+  border: thin solid #ccc
+.price-wrapper
+  input[type="number"]
+    width: 90px
+.dropdown
+  padding-left: 16px
+  display: none
+  border-bottom: thin solid #555
+  background-color: #242424
+.sub
+  border-top: thin solid #555
+  background-color: #242424
+li > a
+  i
+    float: right
+    padding-right: 16px
+.is-show
+  display: block
+input[type="submit"], input[type="reset"]
+  width: 280px
+  max-width: 40%
+  text-align: center
+  color: #fff
+  background-color: $update
+  height: 40px
+  border-radius: 4px
+  cursor: pointer
+  &:hover, &:focus
+    background-color: $updateEvent
+input[type="reset"], .delete-logo, .delete-product
+  background-color: $error
+  &:hover, &:focus
+    background-color: $errorEvent
+input:focus
+  border: thin solid #48D2FF
+.form-group
+  padding: 8px 0
+  color: #aaa
+  font-size: 14px
+  border-bottom: #ececec
+  label
+    padding-top: 12px
+    padding-bottom: 4px
+    display: inline-block
+  img
+    max-width: 100%
+    width: 150px
+    height: auto
+.clearfix
+  min-height: 1px
+  clear: both
+.left-group, .right-group
+  float: left
+.image-group
+  width: 150px
+.attr-group
+  width: calc(100% - 151px)
+  padding-left: 16px
+.msg
+  position: fixed
+  left: 240px
+  right: 0
+  z-index: 500
+  margin: 68px auto
+  max-width: 320px
+  width: auto
+  text-align: left
+  color: #fff
+  background-color: #fff
+  border-radius: 6px
+  box-shadow: 0 10px 50px 2px rgba(0,0,0,0.35)
+  display: none
+  overflow: hidden
+  .flexbox
+    +flexbox()
+    +justify-content(space-between)
+  i
+    display: block
+    padding: 8px
+    cursor: pointer
+  span
+    display: block
+    padding: 8px
+    font-size: 13px
+.error
+  background-color: $error
+  padding: 0 16px
+.success
+  padding: 0 16px
+  background-color: $update
+.toolbar
+  height: 60px
+  padding-left: 240px
+  background-color: #141414
+  position: fixed
+  width: 100%
+  z-index: 10
+.main-menu
+  li, ul
+    width: 100%
+  h2
+    padding: 20px 8px
+    color: #eee
+    font-size: 18px
+    border-bottom: thin solid #555
+    background-color: #141414
+    height: 60px
+  a
+    font-size: 18px
+    padding: 8px
+    text-decoration: none
+    display: block
+    width: 100%
+    border-left: thin solid #333
+  .menu-active a, a:hover
+    background-color: #141414
+    color: #fff
+    border-left: thin solid $info
+.dropdown
+  list-style-type: none
+  a
+    border-left: thin solid #242424
+.is-show-full
+  display: block
+  @media(max-width: 768px)
+    display: none
+.preview-comment
+  width: 100%
+  background-color: #fff
+  +flexbox()
+  div
+    float: left
+    border: thin solid #eee
+    padding: 4px
+    font-size: 14px
+    overflow: hidden
+  div + div
+    border-left: none
+  .id
+    +flex(4)
+    max-width: 4%
+  .name
+    +flex(20)
+    max-width: 20%
+  .text
+    +flex(25)
+    max-width: 25%
+  .email
+    +flex(20)
+    max-width: 20%
+  .who
+    +flex(15)
+    max-width: 15%
+  .main-page
+    +flex(4)
+    max-width: 4%
+  .guid
+    +flex(25)
+    max-width: 25%
+  .price
+    +flex(6)
+    max-width: 6%
+  .phone
+    +flex(13)
+    max-width: 13%
+  .date
+    +flex(10)
+    max-width: 10%
+  .controls
+    +flex(10)
+    max-width: 10%
+    +flexbox()
+    +justify-content(space-around)
+    i
+      font-size: 24px
+      margin: auto
+      display: block
+      cursor: pointer
+    .edit
+      color: $info
+    .delete
+      color: $error
+.title-preview
+  background-color: #ccc
+  div
+    font-weight: 700
+    font-size: 14px
+.clearfix
+  clear: both
+  min-height: 1px
+.modal
+  position: fixed
+  width: 400px
+  height: 250px
+  .accept-group
+    +flexbox()
+    +justify-content(space-around)
+  left: 50%
+  top: 50%
+  margin-top: -200px
+  margin-left: -125px
+  border-radius: 16px
+  padding: 32px
+  background-color: #fff
+  box-shadow: 0 10px 50px 2px rgba(0,0,0,0.7)
+  .title
+    font-size: 30px
+    text-align: center
+    color: $error
+    padding: 24px 0
+.new
+  background-color: #dfffe0
+  div
+    border-color: $update
+.overlay
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 100
+  background-color: rgba(0,0,0,0.33)
+  height: 100vh
+  width: 100vw
+  display: none
+  opacity: 0
+.overlay-edit
+  overflow: hidden
+  .modal
+    min-width: 100%
+    border-radius: 0
+    min-height: 100vh
+    left: 0
+    top: 0
+    margin: 0
+    display: block
+    overflow: auto
+    .title
+      font-size: 30px
+      text-align: center
+      color: $info
+      span
+        font-size: 30px
+.close-edit
+  font-size: 36px
+  position: absolute
+  top: 100px
+  right: 50px
+  cursor: pointer
+  padding: 16px
+.hidden-ajax
+  display: none
+.pagination
+  list-style-type: none
+  +flexbox()
+  +justify-content(center)
+  margin-top: 16px
+  li
+    width: 40px
+    text-align: center
+    a
+      font-size: 20px
+      padding: 6px
+      text-align: center
+      border-radius: 3px
+      background-color: $info
+      color: #fff
+      text-decoration: none
+  .active a,li a:hover
+    background-color: $infoEvent
+.toolbar
+  +flexbox()
+  +justify-content(flex-end)
+  padding-right: 60px
+  position: relative
+  margin-bottom: -60px
+  ul
+    +flexbox()
+    list-style-type: none
+    height: 60px
+    li *, li
+      color: #eee
+      font-size: 18px
+      text-decoration: none
+    li
+      margin: auto 16px
+    i
+      padding: 2px 12px
+    .comments, .orders
+      i
+        padding-left: 2px
+    span
+      font-size: 12px
+      display: inline-block
+      background-color: $updateEvent
+      width: 18px
+      height: 18px
+      padding: 2px
+      text-align: center
+      border-radius: 5px
+.details-wrapper
+  max-height: 0
+  overflow: hidden
+  transition: all 0.4s
+.height-auto
+  max-height: 600px
+  transition: all 0.4s
+  margin-bottom: 16px
+  border: thin solid #eee
+  border-top: none
+  border-radius: 5px
+.dropdown-details
+  color: $info
+.delete-order
+  color: $error
+  cursor: pointer
+.payment
+  padding: 16px
+  font-size: 14px
+  font-weight: 700
+.info-wrapper
+  +flexbox()
+  border-top: thin solid #eee
+  border-left: thin solid #eee
+  > *
+    padding: 4px 16px
+    border-right: thin solid #eee
+    font-size: 14px
+  &:last-child
+    border-bottom: thin solid #eee
+  .product-name
+    width: 100%
+    max-width: 350px
+  .price-info
+    width: 100%
+    max-width: 120px
+  .qty
+    width: 100%
+    max-width: 120px
+.info-header
+  div
+    font-weight: 700
+.preview-group
+  width: 100%
+  img
+    max-width: 100%
+    float: left
+    margin: 6px
+    width: 100px
+.small-title
+  font-size: 20px
+  width: 100%
+  display: block
+  padding: 8px 16px
+.flexbox-pre
+  +flexbox()
+  +justify-content(space-between)
+  +flex-wrap(wrap)
+  span
+    color: #000
+    text-align: center
+    display: block
+    padding-bottom: 16px
+.close-edit
+  z-index: 3
+.accept-group
+  +flexbox()
+.delete-logo, .delete-product
+  width: 280px
+  max-width: 40%
+  text-align: center
+  color: #fff
+  height: 40px
+  line-height: 40px
+  border-radius: 4px
+  cursor: pointer
+  margin-left: 16px
+.reset-add
+  margin-left: 16px

@@ -1,0 +1,4 @@
+//slick in /kids/slick
+//db sliders table
+//comonents slider component
+//models Sliders.php

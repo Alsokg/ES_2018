@@ -1,0 +1,279 @@
+img
+  max-width: 100%
+.screen-comments
+  min-height: 600px
+  background-color: $darkCyan
+  position: relative
+  overflow: hidden
+  @media (max-width: $breakM)
+    min-height: 550px
+  @media (max-width: $breakS)
+    min-height: 520px
+  @media (max-width: $breakXS)
+    min-height: 490px
+  p
+    color: #fff
+    position: relative
+  .separator
+    position: relative
+  .scrolable
+    p
+      color: $black
+.circle
+  border-radius: 50%
+.circle-big
+  height: 500px
+  width: 500px
+  position: absolute
+  +flexbox()
+  background: $lightCyan
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  top: -10px
+  @media (max-width: $breakM)
+    top: -45px
+  @media (max-width: $breakS)
+    top: -40px
+    width: 400px
+    height: 400px
+  @media (max-width: $breakXS)
+    top: 4px
+    height: 320px
+    width: 320px
+    max-width: 100%
+.circle-small
+  height: 240px
+  width: 240px
+  margin: auto
+  background: $midCyan
+  @media (max-width: $breakS)
+    width: 200px
+    height: 200px
+  @media (max-width: $breakXS)
+    width: 160px
+    height: 160px
+    max-width: 100%
+.comment-full-wrapper
+  .ava-wrapper
+    border-radius: 50%
+    width: 100px
+    height: 100px
+    overflow: hidden
+    +flex(0 0 100px)
+    img
+      max-width: 100%
+  .comment-text
+    +flex(1)
+    p
+      color: $black
+      font-size: 100%
+      text-align: left
+      min-height: 100px
+    .gray-color
+      color: $gray
+.comment-view-wrapper
+  .image-group
+    +flex(0 0 100px)
+    padding-left: 0
+    padding-right: 0
+  .area-group
+    +flex(1)
+    max-width: 100%
+    margin-left: auto
+    padding-left: 34px
+.form-aligner
+  width: 100%
+  margin-left: -60px
+  overflow: hidden
+  +transition(all, 0.8s)
+  max-height: 900px
+  textarea
+    +transition(all, 0.8s)
+    max-height: 900px
+.form-aligner
+  > .form-group, > .rating
+    margin-left: 120px
+.gray-color
+  color: $gray
+.social-login-btns
+  span, p
+    color: $gray
+    font-weight: 300
+    padding: 12px 0
+    min-height: 12px !important
+  a
+    color: $black
+    +transition(color, 0.4s)
+    padding: 12px
+    &:hover, &:active, &:focus
+      color: $blue
+      +transition(color, 0.4s)
+.form-controls
+  +flexbox()
+  +justify-content(space-between)
+  max-height: 40px
+  p.yes-no
+    padding-right: 16px
+    color: $gray
+  .yes-no
+    font-size: 87.5%
+  .good, .yes-no, .bad
+    display: inline-block
+    font-weight: 300
+    height: 21px
+    line-height: 21px
+    span, label
+      font-size: 87.5%
+.space
+  display: inline-block
+  width: 4px
+.toggled
+  max-height: 108px
+  overflow: hidden
+  +transition(all, 0.4s)
+  textarea
+    height: 40px
+    margin-top: 34px
+    +transition(all, 0.4s)
+.toggled-full
+  max-height: 0px
+  overflow: hidden
+  +transition(all, 0.4s)
+  textarea
+    margin-top: 0
+    +transition(all, 0.4s)
+.author
+  margin-top: -36px
+  margin-bottom: 12px
+  display: inline-block
+.text-carousel .rating, .add-info
+  display: inline-block
+.text-carousel
+  .header
+    margin-left: -100%
+    margin-bottom: 16px
+    .line-v
+      padding: 0 24px
+      color: $gray
+      @media (max-width: $breakXS)
+        display: none
+    .rating, .add-info
+      width: 150px
+    .rating
+      text-align: right
+    .add-info
+      text-align: left
+.author, .blue-text-btn
+  display: block
+.blue-text-btn
+  position: relative
+  z-index: 4
+.author
+  margin-top: 24px
+  font-weight: 700
+.screen-title p span
+    font-size: 100%
+    font-weight: 400
+.screen-comments .scrolable .select-box p
+  font-size: 16px
+  color: $gray
+  font-weight: 300
+.image-preview
+  cursor: pointer
+.comment-full-wrapper .comment-text p
+  min-height: 40px
+  padding-bottom: 16px
+.comment-full-wrapper
+  padding: 16px
+  max-width: 800px
+  margin: 0 auto
+  border-top: thin solid #ccc
+  padding-top: 32px
+.comment-full-wrapper .comment-text p
+  font-size: 16px
+  font-weight: 300
+.comment-text .rating
+  padding: 4px 0
+.comment-text
+  span
+    color: $black
+  .detail
+    font-weight: 300
+    color: $gray
+.comment-full-wrapper .comment-text .yes-no
+  font-size: 14px
+.reply-btn
+  font-weight: 300
+.comment-text
+  padding-left: 24px
+  @media (max-width: $breakXS)
+    padding-left: 8px
+@media (max-width: $breakT)
+  .comment-view-wrapper
+    display: block
+  .form-aligner
+    margin-left: 0
+  .image-preview
+    margin: 0 auto
+  .image-group
+    text-align: center
+  .form-aligner > .form-group, .form-aligner > .rating
+    margin-left: auto
+  .comment-view-wrapper .area-group
+    padding: 4px 16px
+  .image-group
+    margin-top: 0
+    +transition(all, 0.2s)
+  .toggled
+    .image-group
+      margin-top: -110px
+      +transition(all, 0.2s)
+  .comment-full-wrapper
+    padding: 12px
+@media (max-width: $breakXS)
+  .screen-title > p
+    font-size: 24px
+  .screen-comments .scrolable .select-box p
+    width: 100%
+    text-align: left
+  .social-login-btns p, .social-login-btns span
+    font-size: 12px
+  .comment-full-wrapper .comment-text p
+    font-size: 13px
+@media (max-width: $breakS)
+  .form-group.numeric label
+    display: none
+  .form-controls
+    margin-left: -80px
+    +flex-direction(column)
+  .comment-full-wrapper .ava-wrapper
+    width: 80px
+    height: 80px
+    +flex(0 0 80px)
+  .comment-form
+    width: auto
+  .pseudo-form form, .comment-text form
+    margin-left: -80px
+  .parent .comment-text .comment-text form
+    margin-left: -160px
+  .scrolable .comment-review
+    padding-bottom: 0
+    height: auto
+    min-height: 24px
+    margin-left: 0 !important
+    +order(1)
+  .answer
+    +order(2)
+  .comment-full-wrapper
+    padding: 4px
+  .form-controls p.yes-no
+    padding-right: 2px
+    font-size: 12px
+@media (max-width: 400px)
+  .comment-form
+    width: 310px
+.comment-text
+  .comment-form
+    padding-bottom: 4px !important

@@ -1,0 +1,1539 @@
+@import mix
+@import var
+*
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 16px
+  outline: 0
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  font-family: Roboto Slab, serif
+button, input, input[type="submit"], select
+  border: none
+  background-image: none
+  background-color: transparent
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+ul
+  list-style-type: none
+a
+  text-decoration: none
+html, body
+  width: 100%
+  overflow-x: hidden
+  min-height: 100%
+  background: #f4f4f4
+.no-scroll
+  overflow: hidden !important
+.site-wrapper
+  height: $headerHL
+  padding-top: $headerHL
+  padding-left: 15px
+  padding-right: 15px
+  height: 100%
+  width: 100%
+  max-width: $mainWidth
+  margin: 0 auto
+header
+  height: $headerHL
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  background-color: #fff
+  z-index: 10
+  .h1
+    .h2
+      max-width: $mainWidth
+      padding-left: $side-padding
+      padding-right: $side-padding
+      background-color: #fff
+      height: $headerHL
+      margin: 0 auto
+      +flexbox()
+      +justify-content(space-between)
+.lang-wrapper
+  padding: 13px 0
+  margin-left: 0
+  a
+    color: $gray
+    display: block
+    opacity: 0
+    border-radius: 50%
+    border: thin solid $lightGray
+    padding: 8px
+    +transition(all, 0.2s)
+    float: left
+    width: 41px
+    height: 41px
+    &:hover
+      color: $blue
+      border: thin solid $blue
+      opacity: 1
+    &:first-child
+      margin-left: -41px
+      margin-right: 8px
+    &:last-child
+      margin-left: 8px
+  .active
+    color: $blue
+    border: thin solid $blue
+    display: block
+    float: left
+    opacity: 1
+  &:hover  a
+    display: block
+    opacity: 1
+    +transition(all, 0.2s)
+.lang-wrapper, .phone-wrapper
+  width: 140px
+.phone-wrapper  
+  position: relative
+  cursor: pointer
+.h1
+  box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.1)
+.phone-popup
+  position: absolute
+  border: 5px
+  display: none
+  margin-top: -16px
+  width: 180px
+  margin-left: -20px
+  text-align: center
+  box-shadow: 0px 6px 6px 2px rgba(0,0,0,0.1)
+  cursor: pointer
+  background: #fff
+.phone-wrapper:hover .phone-popup
+  display: block
+.phone-wrapper.open .phone-popup
+  display: block
+nav
+  ul
+    li
+      float: left
+      text-align: center
+      a
+        color: $black
+        text-transform: uppercase
+        line-height: $headerHL
+        width: auto
+        padding: 0 15px
+        min-width: 180px
+        display: block
+        +transition(all, .2s)
+    .active a, li:hover a, li:active a, li:focus a    
+      +transition(all, .2s)
+      color: #fff
+      background: $blue
+.phone-wrapper
+  span
+    color: $black
+    line-height: 66px
+.screen
+  +flexbox()
+  background: #fff
+.screen-1
+  min-height: 650px
+  height: 650px
+  > div
+    height: 100%
+    width: 50%
+  .mom-bg
+    background-image: url(../img/mom.jpg)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+  .info-mom
+    background-color: #fff
+    +flexbox()
+    +flex-direction(column)
+    +justify-content(center)
+    padding-left: 65px
+  .header
+    line-height: 34px
+    margin-bottom: 16px
+    span
+      color: $black
+      font-size: 36px
+      font-weight: 300
+  .description
+    font-weight: 300
+    color: $gray
+    margin-top: 16px
+    margin-bottom: 16px
+  .button-buy-wrapper
+    margin-top: 16px
+.button-buy-wrapper
+  a, input, button
+    display: block
+    cursor: pointer
+    text-align: center
+    width: 290px
+    max-width: 100%
+    height: 50px
+    line-height: 50px
+    background: $blue
+    +transition(all, .2s)
+    color: #fff
+    &:hover, &:focus, &:active
+      background: #ed7218
+      +transition(all, .2s)
+  button
+    margin: 0 auto
+  input
+    width: 180px
+    max-width: 100%
+      
+        
+        
+.bold
+  font-weight: 700 !important
+.separator
+  height: 2px
+  width: 60px
+  background: $blue
+  margin-top: 16px
+  margin-bottom: 16px
+.half-right
+  width: 50%
+  float: right
+  position: absolute
+  margin-left: 50%
+.screen-2
+  position: relative
+  background: #fff
+  .header
+    line-height: 34px
+    margin-bottom: 16px
+    width: 100%
+    text-align: center
+    padding-top: 15%
+    span
+      color: $black
+      font-size: 36px
+      font-weight: 300
+  .separator
+    margin-left: auto
+    margin-right: auto
+.plus
+  position: absolute
+  width: 24px
+  height: 24px
+  overflow: visible
+  border-radius: 50%
+  background-color: $blue
+  z-index: 1
+  img, .txt
+    opacity: 0
+    +transition(all, 0.3s)
+    position: absolute
+    margin-top: 24px
+  img  
+    max-width: 350px
+      
+  span
+    width: 25px
+    height: 25px
+    text-align: center
+    color: #fff
+    position: absolute
+  .hover-bg
+    +transition(all, 0.15s)
+    background: $blue
+    opacity: 0.01
+    border-radius: 50%
+    cursor: pointer
+    -webkit-animation: mymove 3s infinite
+    animation: mymove 3s infinite
+  .pl
+    cursor: pointer
+    &:hover ~ img, &:hover ~ .txt
+      opacity: 1
+      +transition(all, 0.2s)
+    &:hover ~ .hover-bg
+      -webkit-animation: step-end
+      animation: step-end
+@-webkit-keyframes mymove 
+  0%
+    opacity: 0.01
+    width: 24px
+    height: 24px
+    margin-left: 0
+    margin-top: 0
+  20%
+    opacity: 0.5
+    width: 40px
+    height: 40px
+    margin-left: -8px
+    margin-top: -8px
+  35%
+    opacity: 0.01
+    width: 24px
+    height: 24px
+    margin-left: 0
+    margin-top: 0
+  100%
+    opacity: 0.01
+    width: 24px
+    height: 24px
+    margin-left: 0
+    margin-top: 0
+@keyframes mymove
+  0%
+    opacity: 1
+    width: 24px
+    height: 24px
+    margin-left: 0
+    margin-top: 0
+  10%
+    opacity: 0.3
+    width: 40px
+    height: 40px
+    margin-left: -8px
+    margin-top: -8px
+  35%
+    opacity: 0.01
+    width: 56px
+    height: 56px
+    margin-left: -16px
+    margin-top: -16px
+  100%
+    opacity: 0.01
+    width: 24px
+    height: 24px
+    margin-left: 0
+    margin-top: 0
+.pl
+  z-index: 1
+.float-left
+  float: left
+.float-right
+  float: right
+.screen-3
+  padding-bottom: 50px
+  > .flexbox
+    width: 100%
+    > div
+      width: 50%
+      +flexbox()
+  .img
+    width: 204px
+    height: 291px
+    background-repeat: no-repeat
+    background-position: center
+  .info
+    span
+      display: block
+      max-width: 260px
+      padding-left: 15px
+      position: relative
+    .one
+      padding-top: 50px
+    .two
+      padding-top: 100px
+  .left-card
+    width: 204px
+    float: right
+    padding-right: 12px
+    +justify-content(flex-end)
+    .info
+      float: none
+      width: auto
+      .one:after
+        position: absolute
+        height: 1px
+        background: $lightGray
+        content: " "
+        width: 30px
+        right: 5px
+      .two:after
+        position: absolute
+        height: 1px
+        background: $lightGray
+        content: " "
+        width: 102px
+        right: -45px
+        margin-top: 12px
+    .img
+      background-image: url(../img/33-1.png)
+      background-size: cover
+      float: left
+      margin: 0
+      min-width: 204px
+      max-width: 204px
+  .right-card
+    width: 204px
+    float: right
+    padding-left: 12px
+    +justify-content(flex-start)
+    .info
+      +order(2)
+      width: auto
+      span
+        padding-left: 50px
+      .one
+        padding-top: 40px
+      .two
+        padding-top: 165px
+      .one:before
+        position: absolute
+        height: 1px
+        background: $lightGray
+        content: " "
+        width: 70px
+        left: -45px
+        margin-top: 12px
+      .two:before
+        position: absolute
+        height: 1px
+        background: $lightGray
+        content: " "
+        width: 25px
+        left: 0px
+        margin-top: 12px
+    .img
+      background-image: url(../img/33-2.png)
+      float: left
+      margin: 0
+      +order(1)
+      min-width: 204px
+.screen-title
+  display: block
+  padding-top: 70px
+  p
+    font-size: 36px
+    text-align: center
+    span
+      font-size: 36px
+      font-weight: 300
+  .separator
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 50px
+    margin-top: 32px
+  .description
+    font-size: 16px
+    color: $gray
+    margin-top: -16px
+    max-width: 600px
+    margin-left: auto
+    margin-right: auto
+    font-weight: 300
+
+.themes-list
+  +flex-wrap(wrap)
+  max-width: 100%
+  margin: auto 5%
+  margin-top: -8px
+  ul
+    width: 25%
+    li
+      padding: 8px 0
+      span
+        padding-left: 28px
+        display: block
+      img
+        margin-top: 2px
+        display: block
+        float: left
+        margin-right: 6px
+.promo-section
+  height: 120px
+  background: $blue
+  +flexbox()
+  +justify-content(center)
+  span
+    color: #fff
+    display: block
+    font-size: 24px
+    margin: auto 0
+    margin-right: 30px
+  .button-buy-inverse
+    height: 50px
+    margin: auto 0
+    margin-left: 30px
+    a
+      color: $blue
+      background: #fff
+      max-height: 50px
+      display: block
+      width: 190px
+      height: 50px
+      line-height: 50px
+      text-align: center
+.img-container
+  +justify-content(center)
+  padding-top: 30px
+  padding-bottom: 20px
+  img
+    max-width: 100%
+    float: left
+  .left img:first-child, .right img:last-child
+    padding-top: 60px
+  .left img:last-child, .right img:first-child
+    padding-top: 125px
+.step
+  width: 336px
+  height: 343px
+  background-size: contain
+  background-repeat: no-repeat
+  margin: 8px
+  padding: 110px 30px 40px 30px
+  +flexbox()
+  +justify-content(center)
+  +flex-direction(column)
+.screen  
+  .step  .description
+    padding-left: 0
+    padding-right: 0
+  .step .title
+    margin-top: -24px
+.step-one
+  background-image: url(../icons/step1.png)
+.step-two
+  background-image: url(../icons/step2.png)
+.step-three
+  background-image: url(../icons/step3.png)
+.cards-tutorial
+  +justify-content(center)
+  position: relative
+  padding-bottom: 90px
+.dots-fake
+  font-weight: 700
+  margin-left: 25%
+  width: 50%
+  font-size: 24px
+  position: absolute
+  margin-top: 140px
+.screen-7
+  position: relative
+  .button-buy-wrapper
+    padding-bottom: 90px
+    a
+      margin: 0 auto
+  .title
+    font-weight: 700
+    display: block
+    padding-bottom: 16px
+  .description
+    display: block
+    margin: 0
+.order-modal
+  width: 100%
+  height: 100%
+  min-height: 100vh
+  position: fixed
+  background: rgba(0,0,0,0.67)
+  top: 0
+  left: 0
+  display: none
+  opacity: 0
+  +transition(all, 0.2s)
+.opacity
+  opacity: 1
+  +transition(all, 0.2s)
+.modal-content
+  background: #fff
+  width: 100%
+  height: 100vh
+  overflow-y: auto
+.half
+  width: 50%
+.kids-img
+  +justify-content(center)
+  margin: auto
+  text-align: center
+  img
+    max-width: 90%
+    margin: 0 5%
+.product-wrapper
+  padding-left: 18%
+  padding-right: 18%
+  padding-top: 100px
+  padding-bottom: 100px
+  .title p, .price p
+    font-weight: 700
+    font-size: 24px
+    max-width: 300px
+  .title
+    padding-bottom: 16px
+    clear: both
+  .price
+    padding-top: 16px
+    padding-bottom: 16px
+  .description
+    padding-top: 16px
+    padding-bottom: 16px
+    color: $gray
+    font-weight: 300
+  .button-buy-wrapper
+    padding-top: 16px
+footer
+  background: $dark
+  padding: 70px 0
+  .wrapper
+    max-width: $mainWidth
+    width: 100%
+    margin: 0 auto
+    padding-left: 90px
+    padding-right: 90px
+    > *
+      width: 25%
+    .second-list
+      padding-left: 1.5%
+    .contacts
+      padding-left: 5.5%
+    .callback
+      padding-lefT: 5.5%
+    .link-list li a
+      color: $blue
+      font-size: 12px
+      line-height: 32px
+      font-weight: 300
+      &:hover, &:active
+        color: #fff
+    .phone
+      color: $footer
+      font-size: 12px
+      line-height: 32px
+.social-list
+  margin-left: -16px
+  li
+    float: left
+    a
+      color: $blue
+      &:hover, &:active
+        color: #fff
+      padding: 16px
+.callback
+  input
+    width: 180px
+    max-width: 100%
+    height: 48px
+    line-height: 48px
+  label
+    padding: 8px 0
+  label.good
+    color: $green
+  label.bad
+    color: $red
+  #phone-input
+    padding-left: 16px
+    background: $dark
+    border: thin solid #fff
+    color: $gray
+    font-weight: 300
+    font-size: 14px
+    margin-bottom: 16px
+  label
+    display: none
+.order-detail
+  width: 100%
+  max-width: 600px
+  margin: 24px auto
+  .form-group
+    padding: 4px 16px
+  input, select, textarea
+    width: 100%
+    height: 36px
+    border: thin solid #ccc
+    line-height: 36px
+    padding: 0 16px
+    border: thin solid $blue
+.notify-cart
+  display: none
+.scrolable, .pseudo-form
+  padding-top: 80px
+  position: relative
+  form
+    padding: 0 8px 48px 8px
+.product
+  +flexbox()
+  +justify-content(center)
+  width: 100%
+  max-width: 950px
+  margin: 0 auto
+  padding: 8px
+  > *
+    margin: auto
+    padding: 0 12px
+  .product-img
+    max-width: 16%
+    width: 16%
+    text-align: center
+    img
+      max-width: 100%
+      max-height: 100px
+  .product-name
+    width: 25%
+    p
+      font-size: 100%
+      text-align: left
+  .form-group
+    width: 15%
+  .price, .price-total
+    width: 23%
+.product-title
+  padding-bottom: 0
+.product-one
+  padding-top: 0
+.pseudo-form
+  padding-top: 0
+  padding-bottom: 70px
+  @media (max-width: $breakM)
+    .price
+      display: none !important
+.phone-l
+  display: none
+.fix-visible
+  display: block !important
+.fix-hidden
+  display: none !important
+.info-done
+  padding-top: 80px
+  width: 100%
+  max-width: 850px
+  margin: 0 auto
+  text-align: center
+  .thank-header
+    font-size: 200%
+    margin-top: 24px
+  .thank-description
+    margin-top: 24px
+  .to-main
+    margin: 0 auto
+    margin-top: 32px
+.close-icon
+  width: 56px
+  height: 56px
+  position: absolute
+  top: 100px
+  right: 5%
+  cursor: pointer
+  .close-line
+    width: 47px
+    height: 1px
+    background-color: $blue
+    margin: 0 auto
+    position: absolute
+    &:first-child
+      margin-top: 30px
+      transform: rotate(45deg)
+    &:last-child
+      transform: rotate(-45deg)
+      margin-top: 30px
+.numeric
+  position: relative
+  .inc, .dec
+    position: absolute
+    width: 24px
+    height: 36px
+    color: $blue
+    font-size: 18px
+    text-align: center
+    padding-top: 6px
+    padding-bottom: 6px
+    cursor: pointer
+  .inc
+    left: 68px
+  .dec
+    left: 12px
+  input
+    width: 80px
+    text-align: center
+    border: thin solid $gray
+    height: 36px
+    line-height: 24px
+    font-size: 16px
+    padding: 6px 24px
+    color: $dark
+    background-color: #fff
+.toggle-menu
+  display: none
+.screen-2
+  > img
+    width: 100%
+    height: 100%
+  .bike
+    left: 55%
+    top: 61%
+    img
+      margin-top: -242px
+      margin-left: -161px
+  .picture
+    right: 2%
+    top: 65%
+    img
+      margin-top: -242px
+      margin-left: -313px
+  .pillow
+    top: 7%
+    left: 13%
+  .blocks
+    top: 80%
+    left: 12%
+    img
+      margin-top: -220px
+      margin-left: 25px
+  .zebra
+    top: 83%
+    left: 32%
+    img
+      margin-top: -136px
+      margin-left: 25px
+.close-icon
+  position: absolute
+  margin-right: 40px
+  float: right
+  top: 75px
+.persoanl-info
+  padding-top: 24px
+  p
+    font-size: 24px
+    text-align: center
+form
+  clear: both
+  padding-bottom: 50px
+.order-detail
+  .form-group
+    &:nth-child(4), &:nth-child(6)
+      display: none
+.screen-3 .right-card .img
+  background-size: contain
+.order-title
+  padding-bottom: 0
+.product
+  &:first-child
+    border-bottom: thin solid $lightGray
+    padding-bottom: 8px
+.persoanl-info
+  max-width: 950px
+  margin: 0 auto
+  margin-top: 16px
+.total-price
+  border-top: thin solid $lightGray
+  width: 950px
+  max-width: 100%
+  margin: 0 auto
+  padding: 8px
+.screen-title .description
+  padding-left: 16px
+  padding-right: 16px
+.copyright
+  font-size: 14px
+  color: $gray
+  width: 100%
+  text-align: center
+@media (max-width: $breakL)
+  .product-wrapper
+    padding-top: 60px
+    padding-bottom: 60px
+  .site-wrapper
+    padding-left: 0
+    padding-right: 0
+  .close-icon
+    right: 0
+    top: 75px
+  .h2
+    nav
+      +order(3)
+      display: none
+      position: absolute
+      right: 0
+      top: 66px
+      background: #fff
+      box-shadow: 0px 6px 6px 2px rgba(0,0,0,0.1)
+      ul
+        width: 100%
+        li
+          float: none
+          text-align: left
+          width: 100%
+    .phone-wrapper
+      +order(2)
+      margin-right: 120px
+  .toggle-menu
+    display: block
+    position: absolute
+    width: 66px
+    height: 66px
+    right: 40px
+    padding: 22px 13px
+    cursor: pointer
+    span
+      display: block
+      width: 32px
+      height: 2px
+      background: $blue
+      margin: 4px
+  .lang-wrapper
+    a
+      display: block
+      border: none
+      opacity: 1
+      &:hover
+        border: none
+  .screen-1 .header span, .screen-title p span
+    font-size: 28px
+
+  .dots-fake
+    display: none
+  .cards-tutorial
+    +flex-wrap(wrap)
+    padding-bottom: 65px
+    .description
+      padding-left: 0 !important
+      padding-right: 0 !important
+  .step
+    padding: 120px 20px 0 20px
+@media (max-width: $breakM)
+  .modal-content .screen-title
+    padding-top: 60px
+  .screen-8
+    +flex-wrap(wrap)
+    padding-bottom: 40px
+    .half
+      width: 100%
+      +order(1)
+    .kids-img
+      +order(2)
+  .product-wrapper
+    padding-top: 40px
+    padding-bottom: 40px
+    padding-left: 16px
+    padding-right: 16px
+    .button-buy-wrapper a
+      margin-left: auto
+      margin-right: auto
+    .title, .description
+      text-align: center
+      p
+        max-width: 100%
+    .separator
+      margin: 0 auto
+    .buy-kids
+      margin: 0 auto
+  .themes-list
+    +flex-wrap(wrap)
+    ul
+      width: 50%
+  .screen-title
+    padding-top: 50px
+  .screen-title .separator
+    margin-top: 24px
+    margin-bottom: 40px
+  .screen-3 > .flexbox
+    +flex-wrap(wrap)
+    > div
+      width: 100%
+      +justify-content(center)
+  .price
+    display: none
+  .scrolable
+  .product
+    padding-left: 8px
+    padding-right: 8px
+    > *
+      margin: auto
+      padding: 0 6px
+    .product-img
+      max-width: 20%
+      width: 20%
+      img
+        max-width: 100%
+    .product-name
+      width: 30%
+    .numeric
+      width: 20%
+    .price, .price-total
+      width: 20%
+  .numeric .inc
+    left: 62px
+  .numeric .dec 
+    left: 7px
+  .screen-1
+    height: auto
+    +flex-wrap(wrap)
+    > div
+      width: 100%
+    .mom-bg
+      height: 0
+      padding-top: 109%
+      min-height: 400px
+      +order(2)
+    .info-mom
+      +order(1)
+      text-align: center
+      padding: 48px
+      .separator, .button-buy-wrapper a
+        margin-left: auto
+        margin-right: auto
+  .cards-tutorial
+    padding-bottom: 50px
+.error
+  color: $red
+  border-color: $red !important
+@media (max-width: $breakS)
+  .product-wrapper
+    padding-top: 24px
+    padding-bottom: 24px
+  .cards-tutorial
+    padding-bottom: 24px
+  .screen-1 .info-mom .separator
+    margin-top: 0
+    margin-bottom: 0
+  .img-container
+    +flex-wrap(wrap)
+    .ty-ty
+      width: 100%
+      +order(1)
+    .left, .right
+      width: 50%
+      +order(2)
+  .img-container .left img:last-child, .img-container .right img:first-child, .img-container .left img:first-child, .img-container .right img:last-child
+    padding-top: 40px
+  .themes-list
+    margin: 0 16px
+  .screen-3 .right-card .info span
+    padding-left: 32px
+  .screen-3 .left-card .info .two:after
+    width: 45px
+  .screen-3
+    padding-bottom: 20px
+  .screen-title
+    padding-top: 30px
+  .screen-title .separator
+    margin-top: 16px
+    margin-bottom: 30px
+  .screen-3 .right-card .info .two
+    padding-top: 89px
+  .screen-3 .info .two
+    padding-top: 79px
+  .screen-3 .img
+    width: 150px
+    height: 220px
+    min-width: 150px !important
+  .phone-wrapper
+    display: none
+  .toggle-menu, .h2 nav
+    right: 0
+  .close-icon
+    margin-right: 0
+  .product-title > *
+    display: none
+  .scrolable
+  .product
+    +flex-wrap(wrap)
+    padding: 16px 8px
+    .product-img
+      max-width: 40%
+      width: 40%
+      img
+        max-width: 100%
+    .product-name
+      width: 60%
+      max-width: 60%
+    .numeric
+      padding-top: 0px
+      +flexbox()
+      +justify-content(center)
+      width: 40%
+      max-width: 40%
+      .dec
+        left: 32%
+      .inc
+        left: 57%
+    .price, .price-total
+      padding-top: 0px
+      width: 60%
+      @media (max-width: $breakXS)
+        width: 75%
+        max-width: 75%
+  .screen-1 .header span, .screen-title p span
+    font-size: 20px
+  .promo-section
+    span
+      font-size: 18px
+      margin-right: 0
+      height: auto
+    .button-buy-inverse
+      height: 50px
+      a
+        width: 140px
+        height: 50px
+        line-height: 50px
+@media (max-width: $breakT)
+  footer
+    padding: 50px 0
+    .button-buy-wrapper
+      display: inline-block
+    .wrapper
+      padding-left: 16px
+      padding-right: 16px
+  .promo-section
+    padding-left: 16px
+    padding-right: 16px
+    span
+      text-align: right
+      line-height: initial
+  .screen-1 .info-mom
+    padding-left: 16px
+    padding-right: 16px
+  .img-container
+    text-align: center
+    img
+      float: none
+  footer .wrapper
+    +flex-wrap(wrap)
+  footer .wrapper > .callback, footer .wrapper .contacts, footer .wrapper .second-list
+    padding-left: 0
+  footer .wrapper > *
+    width: 33.3333%
+    +order(2)
+  footer .wrapper .contacts
+    padding-left: 16px
+  .callback #phone-input
+    margin-bottom: 0
+  #callback-form
+    text-align: right
+  footer .wrapper > .callback
+    +order(1)
+    width: 100%
+    display: inline-block
+    margin-left: 16px
+@media (max-width: $breakXS + 12px)
+  .img-container
+    .left, .right
+      width: 100%
+  .product-wrapper
+    padding-top: 0
+  footer .wrapper > *, footer .wrapper > .callback, footer .wrapper .contacts
+    width: 50%
+    +order(1)
+    margin-left: 0
+    padding-left: 0
+  #callback-form
+    text-align: left
+  .callback #phone-input
+    margin-bottom: 16px
+  footer .wrapper > .callback
+    padding-top: 12px
+@media (max-width: $breakXS)
+  #product-1
+    padding-top: 24px
+  .scrolable
+  .product
+    .numeric
+      .dec
+        left: 14%
+      .inc
+        left: 62%
+    .product-img
+      max-width: 25%
+      width: 25%
+      img
+        max-width: 100%
+    .product-name
+      width: 75%
+      max-width: 75%
+    .numeric
+      padding-top: 0px
+      +flexbox()
+      +justify-content(center)
+      width: 25%
+      max-width: 25%
+.h2 ul li
+  &:nth-child(2)
+    display: none
+.wrapper .link-list:first-child
+  li:nth-child(2)
+    display: none
+.left-card .img
+  border: thin solid #e4e4e4
+  border-radius: 23px
+.offset-top
+  margin-top: -60px
+.plus-cards
+  left: 18%
+  top: 4%
+  z-index: 2
+  .txt
+    margin-top: -7px
+    margin-left: 31px
+.plus-box
+  left: 40%
+  top: 6%
+  z-index: 1
+  .txt
+    margin-top: -7px
+    margin-left: 31px
+.plus-games
+  left: 50%
+  top: 31%
+  .txt
+    margin-top: -7px
+    margin-left: 31px
+.plus-bottom-box
+  left: 61%
+  top: 54%
+  .txt
+    margin-top: -7px
+    margin-left: 31px
+.plus-mini-box
+  left: 91%
+  top: 68%
+  .txt
+    right: 0
+    margin-right: 31px
+    margin-top: -7px
+.txt
+  color: #fff
+  background-color: $blue
+  border-radius: 18px
+  height: 36px
+  line-height: 36px
+  text-align: center
+  padding: 0 32px
+  width: auto
+  white-space: nowrap
+.nav-tab
+  +justify-content(center)
+  +flex-wrap(wrap)
+  span
+    margin: 8px 16px
+    display: block
+    height: 36px
+    line-height: 36px
+    color: $blue
+    border: thin solid $blue
+    border-radius: 36px
+    +transition(all, 0.2s)
+    cursor: pointer
+    padding: 0px 32px
+  span.active, span:hover
+    color: #fff
+    background-color: $blue
+    +transition(all, 0.2s)
+.tab-content
+  position: relative
+  padding-top: 24px
+.tab
+  top: 0
+  left: 0
+  width: 100%
+  overflow: hidden
+  display: none
+  position: relative
+  &:nth-child(1)
+    display: block
+  ul li
+    float: left
+    min-height: 100px
+    a
+      +flexbox()
+      +justify-content(center)
+      cursor: default
+      @media (max-width: $breakM)
+        +flex-wrap(wrap)
+        
+  nav
+    height: 24px
+    margin-top: -12px
+    width: 100%
+    top: 50%
+    position: absolute
+.cbp-fwdots
+  +flexbox()
+  +justify-content(center)
+  clear: both
+  span
+    display: block
+    margin: 4px
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    cursor: pointer
+    border: thin solid $gray
+  .cbp-fwcurrent
+    background-color: $gray
+.cbp-fwprev, .cbp-fwnext
+  display: block
+  position: relative
+  width: 18px
+  height: 27px
+  background-repeat: none
+  cursor: pointer
+  position: absolute
+  margin-top: -8px
+.cbp-fwprev
+  background-image: url(../img/left-slider.png)
+  left: 50%
+  margin-left: -476px
+  @media (max-width: $breakL)
+    margin-left: -394px
+  @media (max-width: $breakS)
+    margin-left: -240px
+  @media (max-width: $breakXS)
+    margin-left: -187px
+  @media (max-width: 400px)
+    margin-left: -42%
+.cbp-fwnext
+  background-image: url(../img/right-slider.png)
+  lefT: 50%
+  margin-left: 460px
+  @media (max-width: $breakL)
+    margin-left: 380px
+  @media (max-width: $breakS)
+    margin-left: 224px
+  @media (max-width: $breakXS)
+    margin-left: 170px
+  @media (max-width: 400px)
+    margin-left: 38%
+.card-wrapper
+  *
+    font-family: Arial, Helvetica, sans-serif
+  width: 340px
+  height: 230px
+  box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.1)
+  background: #fff
+  margin: 16px
+  .header
+    background: #e74990
+    text-align: right
+    height: 36px
+    line-height: 36px
+    color: $black
+    padding: 0 20px
+    span
+      font-size: 75%
+  @media (max-width: $breakM)
+    margin: 16px 48px
+  @media (max-width: $breakXS)
+    margin: 16px 8px
+.info-words
+  padding: 0 20px
+  padding-top: 20px
+  span
+    display: block
+  .word
+    font-weight: 700
+    color: $black
+    font-size: 112.5%
+    padding-bottom: 19px
+    height: 43px
+  .word-en
+    padding-bottom: 3px
+    height: 23px
+  .trans
+    color: $gray
+    font-size: 87.5%
+  .sen
+    color: $gray
+    padding-top: 19px
+    height: 40px
+.screen-title
+  .notice
+    text-align: center
+    color: $blue
+    font-size: 100%
+    margin-top: -8px
+.screen .price
+  display: block
+  @media (max-width: 768px)
+    text-align: center
+  p
+    max-width: 100%
+.products-container
+  padding: 40px 0
+  +justify-content(center)
+  +flex-wrap(wrap)
+  position: relative
+  .product-main
+    width: 280px
+    padding: 28px
+    background-color: #fff
+    margin: 0 16px
+    margin-bottom: 32px
+    text-align: center
+    .title
+      font-size: 100%
+      color: $black
+      text-align: left
+      padding: 24px 0 12px 0
+      
+    .price
+      padding: 12px 0
+      text-align: left
+    .actual-price
+      font-size: 150%
+    .old-price
+      color: $red
+      text-decoration: line-through
+      font-size: 112.5%
+      display: none
+    .button-buy-wrapper
+      max-width: 140px
+      padding: 12px 0
+      a
+        max-width: 140px
+    .counts
+      height: 40px
+      line-height: 40px
+      padding: 12px 0 4px 1
+      text-align: left
+    img
+      max-width: 120px
+      height: auto
+.new-label
+  background-color: $red
+  color: #fff
+  height: 30px
+  width: 87px
+  padding: 7px 16px
+  font-size: 75%
+  margin-bottom: 16px
+  @media (max-width: $breakM)
+    margin-left: auto
+    margin-right: auto
+
+.promo-main
+  .text
+    margin: auto auto auto 0
+    color: #fff
+    span
+      font-weight: 300
+    .bold
+      font-weight: 700
+  .promo
+    font-weight: 700
+    margin-left: auto
+    font-size: 350%
+    @media (max-width: $breakM)
+      font-size: 200%
+      padding-right: 16px
+.screen-cart 
+  display: none
+.screen-promo
+  padding-top: 0
+.green-border
+  border: thin solid $greenDark
+.green-color
+  color: $greenDark
+.screen-products
+  background: #f7f7f7
+  position: relative
+.transparent
+  opacity: 0
+.screen-41
+  padding-bottom: 40px
+.thead
+  *
+    font-weight: 300
+.clear-fix
+  clear: both
+.total-price
+  +flexbox()
+  +justify-content(flex-end)
+  > div
+    width: 23%
+    padding: 0 12px
+    @media (max-width: $breakS)
+      width: 50%
+      padding: 0 4px
+.big
+  @extend .bold
+  font-size: 150%
+.info-total
+  .total
+    @extend .big
+.header-total
+  margin: auto 0
+  @extend .bold
+  
+    
+.total-strike
+  color: $red
+  text-decoration: line-through
+  display: none
+.clear-offset
+  float: right
+  margin-top: 3px
+  height: 24px
+  width: 24px
+  cursor: pointer
+  padding: 4px
+.clear-product
+  width: 16px
+  display: block
+  height: 16px
+  background-image: url(../img/sprite.png)
+  background-repeat: no-repeat
+  background-position: 0 0
+.gift-ico
+  border-top: none
+  margin-top: 24px
+  position: relative
+  @media (max-width: $breakS)
+    padding-left: 40px
+  .normal:before
+    content: " "
+    display: block
+    position: absolute
+    height: 31px
+    width: 36px
+    left: 0
+    margin-left: -40px
+    background-image: url(../img/sprite.png)
+    background-repeat: no-repeat
+    background-position: 0 -18px
+  .normal
+    padding: 0 12px
+    font-size: 16px
+    font-weight: 300 !important
+    position: relative
+    margin-top: 5px
+.cart-action
+  width: 64px
+  height: 64px
+  border-radius: 50%
+  box-shadow: 0px 2px 14px 1px rgba(0, 0, 0, 0.2)
+  background: #fff
+  position: absolute
+  margin-left: 550px
+  margin-top: 470px
+  display: none
+  +justify-content(center)
+  left: 52%
+  top: 3%
+  .cart-ico
+    display: inline-block
+    height: 17px
+    width: 18px
+    background-image: url(../img/sprite.png)
+    background-repeat: no-repeat
+    background-position: 0 -50px
+  .cart-num
+    color: $blue
+    font-size: 150%
+    display: inline-block
+    padding-left: 3px
+  @media (max-width: $breakL)
+    margin: auto
+    position: fixed
+    top: 0
+    right: 100px
+    z-index: 5
+    box-shadow: none
+  @media (max-width: $breakL)
+    right: 68px
+  cursor: pointer
+  > span
+    margin: auto 0
+.flexbox
+  +flexbox()
+.screen-8
+  background-color: #f7f7f7
+
+  

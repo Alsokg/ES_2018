@@ -1,0 +1,337 @@
+#testPage
+  min-height: 500px
+.block-wrapper
+  max-width: 1220px
+  margin: 0 auto
+.test
+  &__questions
+    margin: 32px 0
+  &__content
+    span
+      display: block
+  &__container
+    width: 240px
+    height: 176px
+    margin: 12px 64px 12px 12px
+    background-color: #fff
+    box-shadow: 0 0 6px 2px rgba(0,0,0,.25)
+    cursor: pointer
+    transition: all 0.25s
+    &:nth-child(5)
+      margin-left: 252px
+    &.chost
+      opacity: 0.75
+  &__container.selected
+     box-shadow: 0 0 12px 3px rgba(0, 196, 249, 0.76)
+  &__header
+    height: 28px
+    background-color: #f9b44d
+    padding: 8px 16px
+  &__theme  
+    font-family: Helvetica, sans-serif
+    font-size: 10px
+    font-weight: 700
+    float: right
+  &__number
+    font-family: Helvetica, sans-serif
+    font-size: 10px
+    font-weight: 700
+    float: left
+  &__answer
+    display: block
+    font-size: 16px
+    font-weight: 700
+    font-family: Helvetica, sans-serif
+    padding-top: 6px
+    &:before
+      position: absolute
+      content: "●"
+      width: 24px
+      height: 24px
+      background: transparent
+      border: thin solid #000
+      border-radius: 50%
+      cursor: pointer
+      margin-left: -64px
+      margin-top: -24px
+      text-align: center
+      line-height: 21px
+      font-size: 21px
+      color: transparent
+  &__content
+    padding: 2px 16px
+  &__tr
+    font-size: 12px
+    padding-top: 2px
+    color: #747474
+    font-family: Helvetica, sans-serif
+  &__word
+    font-size: 16px
+    font-weight: 700
+    font-family: Helvetica, sans-serif
+    padding-top: 8px
+  &__sen
+    padding-top: 8px
+    font-family: Helvetica, sans-serif
+    color: #747474
+.selected
+  opacity: 1
+  .test__answer:before
+    color: #141414
+    transition: color 0.2s
+    content: "\f111"
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+    line-height: 24px
+    display: block
+    font-size: 16px
+.before-ok
+  box-shadow: 0 0 12px 3px rgba(24, 245, 24, 0.6)
+  .test__answer:before
+    color: #0ed22c
+    border-color: #0ed22c
+    background-color: #0ed22c
+    color: #fff
+    transition: color 0.2s
+    content: "\f00c"
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+    line-height: 24px
+    display: block
+    font-size: 16px
+.before-error
+  box-shadow: 0 0 12px 3px rgba(245, 24, 24, 0.6)
+  .test__answer:before
+    color: #f23232
+    border-color: #f23232
+    background-color: #f23232
+    color: #fff
+    transition: color 0.2s
+    content: "\f00d"
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+    display: block
+    line-height: 24px
+    font-size: 14px
+.before-hidden
+  .test__answer:before
+    display: none
+.word-uk
+  width: 240px
+  font-size: 22px
+  font-weight: 700
+  padding-right: 44px
+  padding-left: 16px
+  padding-top: 16px
+.block-wrapper
+  display: flex
+  flex-wrap: wrap
+  padding: 3.5% 8px
+.parent-wrapper  
+  &:nth-child(2n + 1)
+    background-color: #f7f7f7
+.bg-silver
+  background-color: #f7f7f7
+.results-view
+  max-width: 1220px
+  margin: 0 auto
+  .parent-wrapper
+    background-color: #f7f7f7
+  .test__container
+    opacity: 1
+.rounds-container
+  display: flex
+  justify-content: center
+  margin: 16px
+  margin-bottom: 56px
+.round-circle
+  height: 32px
+  width: 32px
+  line-height: 29px
+  border-radius: 50%
+  border: thin solid #747474
+  color: #747474
+  text-align: center
+  font-size: 14px
+  margin: 4px
+.current
+  background: #00abff
+  color: #fff
+  border-color: #00abff
+.passed
+  color: #fff
+  border-color: #141414
+  background-color: #141414
+.phone-popup span
+  line-height: 44px
+  display: block
+.test__page
+  position: relative
+.results-view
+  position: absolute
+  display: flex
+  overflow: hidden
+  left: 0
+  right: 0
+  .parent-wrapper
+    min-width: 100%
+    position: relative
+    transition: all 0.2s
+    left: 0
+.nav-results
+  display: flex
+  justify-content: center
+  span
+    color: #00abff
+    font-size: 20px
+    margin-top: 18px
+.nav-control
+  width: 32px
+  height: 32px
+  background-color: #00abff
+  margin: 16px
+  color: #fff
+  cursor: pointer
+  text-align: center
+  line-height: 29px
+  border-radius: 50%
+.nav-disabled
+  background-color: #ccc
+  cursor: default
+#test-tooltip
+  position: fixed
+  top: 66px
+  left: 0
+  width: 100%
+  height: 0
+  overflow: hidden
+  transition: height 0.15s
+  background: #4890fe
+  justify-content: space-between
+  display: flex
+  padding: 0 16px
+  span
+    align-self: center
+    color: #fff
+#close-tooltip
+  cursor: pointer
+  font-family: Helvetica, sans-serif
+  float: right
+  padding: 16px
+  align-self: center
+  color: #fff
+#box-js
+  background-color: #fff !important
+.test-button
+  display: flex
+  justify-content: center
+  padding-bottom: 66px
+  span
+    font-size: 28px
+    position: absolute
+    margin-left: 16px
+    line-height: 48px
+
+@media (max-width: 1229px)
+  #testPage
+    min-height: 540px
+  .word-uk
+    width: 100%
+    text-align: center
+    padding-right: 0
+  .block-wrapper
+    justify-content: center
+  .test__container
+    margin-left: 32px
+    margin-right: 32px
+  .test__container:nth-child(5)
+    margin-left: 32px
+@media (max-width: 975px)
+  #testPage
+    min-height: 720px
+  .test__container
+    margin-left: 64px
+    margin-right: 64px
+  .test__container:nth-child(5)
+    margin-left: 64px
+@media (max-width: 800px)
+  .test__container
+    margin-left: 32px
+    margin-right: 32px
+  .test__container:nth-child(5)
+    margin-left: 32px
+@media (max-width: 660px)
+  .test__container
+    width: 42%
+    margin-left: 6%
+    margin-right: 2%
+  .test__container:nth-child(5)
+    margin-left: 6%
+  .test__answer
+    &:before
+      margin-left: -50px
+@media (max-width: 530px)
+  #testPage
+    min-height: 590px
+  .test__container
+    position: relative
+    width: 48%
+    margin: 1%
+    height: 144px
+  .test__container:nth-child(5)
+    margin-left: 1%
+  .test__answer
+    font-size: 13px
+    padding-top: 4px
+    &:before
+      margin-left: 0
+      right: 8px
+      margin-top: -2px
+      width: 14px
+      height: 14px
+      line-height: 12px
+      font-size: 14px
+  .test
+    &__tr
+      font-size: 11px
+      padding-top: 3px
+    &__sen
+      padding-top: 4px
+      font-size: 12px
+    &__content
+      padding: 2px 8px
+    &__word
+      padding-top: 4px
+      font-size: 12px
+    &__header
+      padding: 11px 8px
+    &__number, &__theme
+      font-size: 8px
+.name-js
+  white-space: pre
+.title-test
+  h1
+    font-size: 36px
+    text-align: center
+#rec-level
+  font-size: 24px
+  text-align: center
+#recomend
+  text-align: center
+  margin-top: -16px
+  padding-bottom: 32px
+  a
+    color: #00abff
+    &:hover, &:active
+      color: #ed7218
+.test-page .screen-title .separator
+  margin-top: 40px
+.test-button
+  margin-top: 32px
+    
