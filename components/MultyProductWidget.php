@@ -10,7 +10,9 @@ class MultyProductWidget extends Widget
 {
     public $products = array();
     public $slag = "";
+    public $notice;
     public $sale;
+    public $title;
 
 
     public function init()
@@ -25,7 +27,9 @@ class MultyProductWidget extends Widget
             'slag' => $this->slag,
             'productsArray' => $this->products,
             'sale' => $this->sale,
-            'lang' => $lang
+            'lang' => $lang,
+            'notice' => $this->notice,
+            'title' => $this->title
         ]);
     }
 }

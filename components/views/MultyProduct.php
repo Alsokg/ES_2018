@@ -9,18 +9,20 @@ use yii\helpers\Url;
 <?php if ($productsArray) { ?>
 
 <div id="boxes" class="screen screen-products screen-title">
-        <p><?= Yii::t('yii', 'multy-pr-title') ?></p>
+        <p><?=$title?></p>
         <div class="separator"></div>
+        <?php if ($notice) { ?>
         <p class="notice"><?= Yii::t('yii', 'multy-pr-notice') ?></p>
+        <?php } ?>
         <div class="flexbox products-container">
 
+<?php if ($sale){ ?>
 <div class="desktop-promo">
 <div class="flexbox">
 	<div class="secont-promo"><div class="secont-bg">
 <div class="text-wrapper"><?= Yii::t('yii', 'Get free delivery, when order 2 boxes') ?></div>
 </div>
 </div>
-    <?php if ($sale){ ?>
         <div class="screen screen-promo screen-title">
             <div class="promo-section promo-main">
                 <div class="text">
@@ -28,10 +30,9 @@ use yii\helpers\Url;
                 </div>
             </div>    
         </div>
-    <?php } ?>
-
 </div>
 </div>
+<?php } ?>
             <?php foreach($productsArray as $pr) { ?>
 
             <div class="product-main global-pr<?=$pr['id']?>" id="product-<?=$pr['id']?>">
@@ -169,7 +170,7 @@ $('.code-show').on('click', function(e){
 	$('#promo-code').css('display', 'block');
 });
 
-var session = <?php echo json_encode($session); ?>;
+var session = "";
 
 //fn
 var form = document.getElementById('main-order');
@@ -200,7 +201,7 @@ for (var k in session){
          cart = new Cart({discount: <?=$sale['discount']?>, productsForDiscount: <?=$sale['products_for_discount']?>});
     <?php }  else {?>
          cart = new Cart();
-         <?php } ?>
+    <?php } ?>
 
 
 <?php $i=0; foreach ($productsArray as $product) { ?>

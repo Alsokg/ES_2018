@@ -77,7 +77,7 @@ $config = [
         'site/<action>/<id:>' => 'site/<action>',
         'faq' => 'site/faq',
         'cards/<action>/<id:>' => 'cards/<action>',
-        'kids' => 'site/flash',
+        'kids' => 'landing/kids',
             ],
         // Ignore / Filter route pattern's
 

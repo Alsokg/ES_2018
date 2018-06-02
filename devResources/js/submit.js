@@ -1,5 +1,5 @@
   
-var customKidsAdditionalDiscount = 10;
+var customKidsAdditionalDiscount = 0;
 var customKidsCount = 0;
 
 var Product = function(options){
@@ -182,13 +182,13 @@ var Cart = function(options){
         //var multi = parseInt(count/total.productsForDiscount);
         if (count >= total.productsForDiscount){
             totalDiscount = count*total.discount;
-            if (customKidsCount > 0){
-                totalDiscount = totalDiscount + (customKidsAdditionalDiscount*customKidsCount);
-            }
-        } else if (productPromo > 0) {
+            // if (customKidsCount > 0){
+            //     totalDiscount = totalDiscount + (customKidsAdditionalDiscount*customKidsCount);
+            // }
+        }
+        if (productPromo > 0) {
             for (var i = 0; i < products.length; i++){
                 var prDiscount = products[i].getPrice()/100.0;
-                console.log(prDiscount, products.length);
                 totalDiscount += Math.ceil(prDiscount)*productPromo*products[i].getCount();
             }
         }
@@ -226,6 +226,7 @@ var Cart = function(options){
     }
     
     this.setPromo = function(percent){
+        // console.log("setPromo => ", percent);
         productPromo = percent;
         root.updateCartTotal();
     }

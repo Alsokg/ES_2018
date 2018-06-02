@@ -2,7 +2,7 @@
    
      <div class="tab-content tab--padding">
         <div class="tab landing-slider">
-            <ul class="cb-slider">   
+            <ul class="cb-slider"> 
 <?php $i=0; foreach ($cards as $card){ ?>
 <li class="cards-wrapper">
     <div class="card card--left">
@@ -14,11 +14,20 @@
     		<?php if ($card['word_1']) { ?>
     			<span class="card__word"><?php echo $card['word_1']; ?></span>
     		<?php } ?>
+    		<?php if (isset($card['tr_1'])) { ?>
+    			<span class="card__tr"><?php echo $card['tr_1']; ?></span>
+    		<?php } ?>
     		<?php if ($card['word_2']) { ?>
     			<span class="card__word"><?php echo $card['word_2']; ?></span>
     		<?php } ?>
+    		<?php if (isset($card['tr_2'])) { ?>
+    			<span class="card__tr"><?php echo $card['tr_2']; ?></span>
+    		<?php } ?>
     		<?php if ($card['word_3']) { ?>
     			<span class="card__word"><?php echo $card['word_3']; ?></span>
+    		<?php } ?>
+    		<?php if (isset($card['tr_3'])) { ?>
+    			<span class="card__tr"><?php echo $card['tr_3']; ?></span>
     		<?php } ?>
     		<?php if ($card['sentence_0']) { ?>
     			<span class="card__sen"><?php echo $card['sentence_0']; ?></span>
@@ -37,11 +46,20 @@
     		<?php if ($card['word_1_ua']) { ?>
     			<span class="card__word"><?php echo $card['word_1_ua']; ?></span>
     		<?php } ?>
+    		<?php if (isset($card['tr_1'])) { ?>
+    			<span class="card__tr">&nbsp;</span>
+    		<?php } ?>
     		<?php if ($card['word_2_ua']) { ?>
     			<span class="card__word"><?php echo $card['word_2_ua']; ?></span>
     		<?php } ?>
+    		<?php if (isset($card['tr_2'])) { ?>
+    			<span class="card__tr">&nbsp;</span>
+    		<?php } ?>
     		<?php if ($card['word_3_ua']) { ?>
     			<span class="card__word"><?php echo $card['word_3_ua']; ?></span>
+    		<?php } ?>
+    		<?php if (isset($card['tr_3'])) { ?>
+    			<span class="card__tr">&nbsp;</span>
     		<?php } ?>
     		<?php if ($card['sentence_0_ua']) { ?>
     			<span class="card__sen"><?php echo $card['sentence_0_ua']; ?></span>

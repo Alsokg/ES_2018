@@ -21,6 +21,9 @@ use app\models\LandingPages;
 use app\models\MultyLandingPages;
 use app\models\PolskaCards;
 
+use app\models\Sliders;
+use app\models\Adven;
+
 use app\models\order\Orders;
 use app\models\order\OrderInfo;
 use app\models\order\OrderConnector;
@@ -31,6 +34,8 @@ use app\components\ProductWidget;
 use app\components\MultyProductWidget;
 use app\components\blocks\Block1Widget;
 use app\components\CardsWidget;
+use app\components\SliderWidget;
+use app\components\AdvenWidget;
 
 class LandingController extends BasicController{
     public $sl;
@@ -216,6 +221,8 @@ class LandingController extends BasicController{
                 'slag' => $pageSeoUrl,
                 'products' => $products,
                 'sale' => $sale,
+                'notice' => true,
+                'title' => Yii::t('yii', 'multy-pr-title'),
                 ]),
             'block1' => Block1Widget::widget([
                 'title' => $page['block1_title_'.$lang],
@@ -234,6 +241,309 @@ class LandingController extends BasicController{
             'pre' => $page['preorder'],
             ]);
     }
+    
+    public function actionKids(){
+        
+       
+        $url = Url::home();
+       // echo $url;
+       $this->view->params['val'] = 3;
+
+        $this->setIndex();
+        
+        $kids = KidsLanding::find()->one(); // get info for kids
+    $one_title = array($kids->one_title_uk, $kids->one_title_ru, $kids->one_title_en);
+    $one_description = array($kids->one_description_uk, $kids->one_description_ru, $kids->one_description_en);
+    
+    $two_title = array($kids->two_title_uk, $kids->two_title_ru, $kids->two_title_en);
+    
+    $three_title = array($kids->three_title_uk, $kids->three_title_ru, $kids->three_title_en);
+    $three_one = array($kids->three_one_uk, $kids->three_one_ru, $kids->three_one_en);
+    $three_two = array($kids->three_two_uk, $kids->three_two_ru, $kids->three_two_en);
+    $three_three = array($kids->three_three_uk, $kids->three_three_ru, $kids->three_three_en);
+    $three_four = array($kids->three_four_uk, $kids->three_four_ru, $kids->three_four_en);
+    $four_title = array($kids->four_title_uk, $kids->four_title_ru, $kids->four_title_en); 
+    
+    $six_title = array($kids->six_title_uk, $kids->six_title_ru, $kids->six_title_en);
+    $six_description = array($kids->six_description_uk, $kids->six_description_ru, $kids->six_description_en);
+    
+    $seven_title = array($kids->seven_title_uk, $kids->seven_title_ru, $kids->seven_title_en);
+    $seven_step1 = array($kids->seven_step1_uk, $kids->seven_step1_ru, $kids->seven_step1_en);
+    $seven_step2 = array($kids->seven_step2_uk, $kids->seven_step2_ru, $kids->seven_step2_en);
+    $seven_step3 = array($kids->seven_step3_uk, $kids->seven_step3_ru, $kids->seven_step3_en);
+    
+    $seven1Src = $url.$kids->seven_step1_src;
+    $seven2Src = $url.$kids->seven_step2_src;
+    $seven3Src = $url.$kids->seven_step3_src;
+    
+    //sale section
+    $sale = Sale::find()->where(['active' => 1, 'for_page' => 3])->one();
+    
+    $sale_title = array($sale->title_uk, $sale->title_ru, $sale->title_en);
+    
+    //product section
+    $product = Products::findOne(1);
+    $images = $product->images;
+    $product_name = array($product->name_uk, $product->name_ru, $product->name_en);
+    $procut_description = array($product->description_uk, $product->description_ru, $product->description_en);
+        
+        
+    $siteTitle = array($kids->site_title_uk,$kids->site_title_ru,$kids->site_title_en);
+    $siteDescription = array($kids->site_description_uk,$kids->site_description_ru,$kids->site_description_en);
+    
+    
+    if ($this->langIndex == 0){
+        
+$this->view->params['seo'] = $kids->seo_text_uk;
+    } else if ($this->langIndex == 1){
+        
+$this->view->params['seo'] = $kids->seo_text_ru;
+    } else if ($this->langIndex == 2){
+        
+$this->view->params['seo'] = $kids->seo_text_en;
+    }
+    Yii::$app->view->registerMetaTag([
+        'name' => 'description',
+        'content' => $siteDescription[$this->langIndex]
+    ]);
+$siteInfo = Info::findOne(1);
+
+$formComment = $this->renderPartial('comment', []);
+
+$comments = $this->getRawComments($this->view->params['val']);
+
+$this->allCommentsCount = count($this->getPageRatings($this->view->params['val']));
+
+$sorted = array();
+$childs = array();
+$i = 0;
+foreach ($comments as $com){
+    if($com['parent_id'] == 0){
+        $sorted[$com['id']] = $com;
+    } else {
+        $childs[$com['id']] = $com;
+    }
+}
+
+foreach ($childs as $child){
+    $sorted[$child['parent_id']]['childs'][$child['id']] = $child;
+}
+//var_dump($sorted);
+$this->allPageComments = $sorted;
+
+$rating = 0;
+$commentsR = Comments::find()->where(['page_id' => $this->view->params['val'], 'publish' => 1, 'parent_id' => 0])->asArray()->all();
+foreach($commentsR as $comment){
+    $rating += $comment['rating'];
+}
+if (count($commentsR) > 0){
+$rating = round($rating/count($commentsR), 0, PHP_ROUND_HALF_UP);
+} else { $rating = 0; }
+
+//new kids code 
+
+$sliderData = Sliders::find()->where(['page' => 'kids'])->asArray()->one();
+
+$slider = SliderWidget::widget([
+                    'className' => 'kids-main-slider',
+                    'data' => $sliderData,
+                ]);
+                
+        
+$pazzles = explode(",", $kids->two_bg_image);
+
+$advenData = Adven::find()->where(['page_id' => $kids->page_id])->asArray()->all();
+
+$advens = AdvenWidget::widget([
+        'title' => $three_title[$this->langIndex],
+        'advens' => $advenData,
+    ]);
+    
+    $products = Products::find()->where(['publish' => 1, 'for_page' => 'kids'])->asArray()->all();
+    
+    $i = 0;
+foreach ($products as $pr) {
+            
+            
+            $image = Images::find()->where(['id' => $products[$i]['image_connector']])->asArray()->one();
+            $products[$i]['image-src'] = "/".$image["src"];
+            $products[$i]['image-alt'] = $image["alt"];
+            $i++;
+        }
+//new kids code end
+
+
+
+        return $this->render('kids', [
+            'langID' => $this->langIndex,
+            'siteInfo' => $siteInfo,
+            'title' => $siteTitle[$this->langIndex],
+            'oneTitle' => $one_title[$this->langIndex],
+            'oneDescription' => $one_description[$this->langIndex],
+            'oneSrc' => $kids->one_bg_image,
+            'pazzles' => $pazzles,
+            'twoTitle' => $two_title[$this->langIndex],
+            'threeTitle' => $three_title[$this->langIndex],
+            'threeOne' => $three_one[$this->langIndex],
+            'threeTwo' => $three_two[$this->langIndex],
+            'threeThree' => $three_three[$this->langIndex],
+            'threeFour' => $three_four[$this->langIndex],
+            'fourTitle' => $four_title[$this->langIndex],
+            'sale' => $sale_title[$this->langIndex],
+            'sixTitle' => $six_title[$this->langIndex],
+            'sixDescription' => $six_description[$this->langIndex],
+            'picture_1' => $kids->picture_1,
+            'picture_2' => $kids->picture_2,
+            'picture_3' => $kids->picture_3,
+            'picture_4' => $kids->picture_4,
+            'picture_main' => $kids->picture_main,
+            'sevenTitle' => $seven_title[$this->langIndex],
+            'sevenStep1' => $seven_step1[$this->langIndex],
+            'sevenStep2' => $seven_step2[$this->langIndex],
+            'sevenStep3' => $seven_step3[$this->langIndex],
+            'seven1Src' => $seven1Src,
+            'seven2Src' => $seven2Src,
+            'seven3Src' => $seven3Src,
+            'productImages' => $images,
+            'productName' => $product_name[$this->langIndex],
+            'productDescription' => $procut_description[$this->langIndex],
+            'price' => $product->price,
+            'url' => $url,
+            'productID' => $product->id,
+            'comments' => $this->getFeaturedComments($this->view->params['val']),
+            'formComment' => $formComment,
+            'rating' => $rating,
+            'countReviews' => count($commentsR),
+            'allComments' => $this->allPageComments,
+            'globalCount' => $this->allCommentsCount,
+            'mainSlider' => $slider,
+            'advens' => $advens,
+            'productWidget' => MultyProductWidget::widget([
+                'slag' => $pageSeoUrl,
+                'products' => $products,
+                'sale' => '',
+                'notice' => false,
+                'title' => 'kids',
+            ]),
+            
+        ]);
+    }
+    // import this to heloer
+    public $allPageComments = "";
+     public $allCommentsCount = "";
+     
+        public function getRawComments($id){
+        return Comments::find()->where(['page_id' => $id, 'publish' => 1])->orderBy(['date' => SORT_DESC])->asArray()->all();
+    }
+    
+    public function actionAll($id){
+        //if (Yii::$app->request->isAjax) {
+            $comments = Comments::find()->where(['page_id' => $id, 'publish' => 1])->asArray()->all();
+
+         $len = 50;
+         $i = 0;
+         foreach ($comments as $comment){
+            if (strlen($comment['text']) > $len){
+                $comment['text'] = substr($comment['text'], 0, $len - 3) . "...";
+                $comment['cut'] = 1;
+            } else {
+                $comment['cut'] = 0;
+            }
+            $comments[$i++] = $comment;
+         }
+
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+                        return  json_encode($comments);
+        //}
+        //else throw new \yii\web\BadRequestHttpException;
+    }    
+        public function getProductRatings($id){
+        return Comments::find()->where(['product_id' => $id, 'publish' => 1, 'parent_id' => 0])->asArray()->all();
+    }
+    public function getPageRatings($id){
+        return Comments::find()->where(['page_id' => $id, 'publish' => 1, 'parent_id' => 0])->asArray()->all();
+    }
+    public function actionPositive($id){
+        if (Yii::$app->request->isAjax) {
+            
+            $response = Yii::$app->response;
+            $response->format = \yii\web\Response::FORMAT_JSON;
+            $comment = Comments::findOne($id);
+            
+            if (array_key_exists('negative'.$id, $_SESSION)){
+                if ($_SESSION['negative'.$id] == 1){
+                      $comment->positive += 1;
+                }
+                
+                $_SESSION['negative'.$id] = 0;
+                $_SESSION['positive'.$id] = 1;
+            } else {
+
+                $_SESSION['positive'.$id] = 1;
+                $comment->total_reviews += 1;
+                $comment->positive += 1;
+            }
+            $comment->update();
+            $response->data = [$comment->total_reviews, $comment->positive];
+            return $response;
+        }else throw new \yii\web\BadRequestHttpException;
+    }
+    public function actionNegative($id){
+        if (Yii::$app->request->isAjax) {
+                        $response = Yii::$app->response;
+            $response->format = \yii\web\Response::FORMAT_JSON;
+            $comment = Comments::findOne($id);
+            
+            if (array_key_exists('positive'.$id, $_SESSION)){
+                if ($_SESSION['positive'.$id] == 1){
+                      $comment->positive -= 1;
+                }
+                
+                $_SESSION['positive'.$id] = 0;
+                $_SESSION['negative'.$id] = 1;
+            } else {
+
+                $_SESSION['negative'.$id] = 1;
+                $comment->total_reviews += 1;
+                //$comment->positive += 1;
+            }
+            $comment->update();
+             $response->data = [$comment->total_reviews, $comment->positive];
+
+            return $response;
+        }else throw new \yii\web\BadRequestHttpException;
+    }
+    
+    //helper ends
+
+
+public function splitDate($date){
+    $time = explode('-',($date));
+    $comment = array();
+    $comment['day'] = $time[0];
+    $comment['month'] = $time[1];
+    $comment['year'] = $time[2];
+    return $comment;
+}
+
+public function getFeaturedComments($id){
+        $len = 150;
+         $i = 0;
+         $comments = Comments::find()->where(['page_id' => $id,  'publish' => 1, 'featured' => 1])->asArray()->limit(5)->all();
+         foreach ($comments as $comment){
+
+            $comment['time'] = $this->splitDate($comment['date']);
+             $comment['full_text'] = $comment['text'];//save full text
+            if (strlen($comment['text']) > $len){
+                $comment['text'] = substr($comment['text'], 0, $len - 10) . "...";
+                $comment['cut'] = 1;
+            } else {
+                $comment['cut'] = 0;
+            }
+            $comments[$i++] = $comment;
+         }
+    return $comments;
+}
     
     public function actionOrder(){
         if (Yii::$app->request->isAjax) {
